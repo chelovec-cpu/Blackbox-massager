@@ -7,12 +7,12 @@ import com.github.javaparser.ast.body.MethodDeclaration
 import com.github.javaparser.ast.expr.ObjectCreationExpr
 import java.io.File
 
-object Blackbox MessengerCodeParser {
-    fun parse(files: List<File>): Blackbox MessengerTlClasses {
-        return Blackbox MessengerTlClasses(files.map { findAllClasses(it) }.flatten().toSet())
+object TelegramCodeParser {
+    fun parse(files: List<File>): TelegramTlClasses {
+        return TelegramTlClasses(files.map { findAllClasses(it) }.flatten().toSet())
     }
 
-    private fun findAllClasses(javaFile: File): List<Blackbox MessengerTlClass> {
+    private fun findAllClasses(javaFile: File): List<TelegramTlClass> {
         val parser = JavaParser()
         val result = parser.parse(javaFile)
 
@@ -26,7 +26,7 @@ object Blackbox MessengerCodeParser {
             .orElse(null)
 
 
-        val matchingClassNames = mutableListOf<Blackbox MessengerTlClass>()
+        val matchingClassNames = mutableListOf<TelegramTlClass>()
 
         val allClassLike = cu.findAll(ClassOrInterfaceDeclaration::class.java)
 
@@ -93,7 +93,7 @@ object Blackbox MessengerCodeParser {
             }
 
             if (hasStaticIntConstructor || hasDeserializeMethod || hasSerializeToStream || hasReadParams || hasDeserializeResponse) {
-                matchingClassNames.add(Blackbox MessengerTlClass(
+                matchingClassNames.add(TelegramTlClass(
                     constructor = constructorValue?.toUInt(),
 
                     packageName = packageName,
