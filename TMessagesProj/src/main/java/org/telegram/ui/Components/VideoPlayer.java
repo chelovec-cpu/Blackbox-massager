@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -8,7 +8,7 @@
 
 package org.telegram.ui.Components;
 
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.LocaleController.getString;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -78,21 +78,21 @@ import com.google.android.exoplayer2.video.SurfaceNotValidException;
 import com.google.android.exoplayer2.video.VideoListener;
 import com.google.android.exoplayer2.video.VideoSize;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.DispatchQueue;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.FourierTransform;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.chromecast.ChromecastMedia;
-import org.telegram.messenger.chromecast.ChromecastMediaVariations;
-import org.telegram.messenger.secretmedia.ExtendedDefaultDataSourceFactory;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.DispatchQueue;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.FourierTransform;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.chromecast.ChromecastMedia;
+import com.blackbox.messenger.chromecast.ChromecastMediaVariations;
+import com.blackbox.messenger.secretmedia.ExtendedDefaultDataSourceFactory;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.Stories.recorder.StoryEntry;
 

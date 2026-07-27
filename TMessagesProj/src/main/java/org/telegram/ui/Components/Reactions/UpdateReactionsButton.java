@@ -5,8 +5,8 @@ import android.content.Context;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.R;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.ColoredImageSpan;
 import org.telegram.ui.Stories.recorder.ButtonWithCounterView;

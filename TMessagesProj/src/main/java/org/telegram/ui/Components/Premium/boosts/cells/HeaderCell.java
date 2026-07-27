@@ -1,7 +1,7 @@
 package org.telegram.ui.Components.Premium.boosts.cells;
 
-import static org.telegram.messenger.AndroidUtilities.REPLACING_TAG_TYPE_LINKBOLD;
-import static org.telegram.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.AndroidUtilities.REPLACING_TAG_TYPE_LINKBOLD;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -28,14 +28,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;

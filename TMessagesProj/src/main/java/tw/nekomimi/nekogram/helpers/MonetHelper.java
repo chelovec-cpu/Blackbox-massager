@@ -14,7 +14,7 @@ import androidx.core.graphics.ColorUtils;
 
 import com.google.android.exoplayer2.util.Log;
 
-import org.telegram.messenger.ApplicationLoader;
+import com.blackbox.messenger.ApplicationLoader;
 import org.telegram.ui.ActionBar.OKLCH;
 import org.telegram.ui.ActionBar.Theme;
 

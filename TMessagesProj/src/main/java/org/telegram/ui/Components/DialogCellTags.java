@@ -1,6 +1,6 @@
 package org.telegram.ui.Components;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -16,13 +16,13 @@ import android.text.StaticLayout;
 import android.text.TextUtils;
 import android.view.View;
 
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.UserConfig;
+import com.blackbox.messenger.AccountInstance;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.UserConfig;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.DialogsActivity;
 

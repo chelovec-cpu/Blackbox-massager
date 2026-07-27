@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -16,8 +16,8 @@ import android.graphics.SurfaceTexture;
 import android.text.TextUtils;
 import android.view.View;
 
-import org.telegram.messenger.video.MediaCodecPlayer;
-import org.telegram.messenger.video.MediaCodecVideoConvertor;
+import com.blackbox.messenger.video.MediaCodecPlayer;
+import com.blackbox.messenger.video.MediaCodecVideoConvertor;
 import org.telegram.tgnet.AbstractSerializedData;
 import org.telegram.tgnet.InputSerializedData;
 import org.telegram.tgnet.OutputSerializedData;

@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.voip;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -12,9 +12,9 @@ import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.NonNull;
 
-import org.telegram.messenger.LiteMode;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.LiteMode;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.Components.AnimatedEmojiDrawable;
 import org.telegram.ui.Components.CubicBezierInterpolator;

@@ -22,12 +22,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.Utilities;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.AnimatedEmojiSpan;
 import org.telegram.ui.Components.LayoutHelper;

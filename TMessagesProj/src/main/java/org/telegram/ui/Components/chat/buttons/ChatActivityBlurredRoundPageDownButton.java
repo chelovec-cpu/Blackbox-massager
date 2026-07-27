@@ -1,7 +1,7 @@
 package org.telegram.ui.Components.chat.buttons;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -17,13 +17,13 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.voip.VoIPService;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.voip.VoIPService;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 

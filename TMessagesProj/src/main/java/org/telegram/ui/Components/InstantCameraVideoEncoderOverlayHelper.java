@@ -7,9 +7,9 @@ import android.opengl.GLUtils;
 
 import androidx.annotation.RawRes;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.R;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

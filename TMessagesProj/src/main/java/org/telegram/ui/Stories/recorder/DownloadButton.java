@@ -1,8 +1,8 @@
 package org.telegram.ui.Stories.recorder;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.dpf2;
-import static org.telegram.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
 
 import android.Manifest;
 import android.app.Activity;
@@ -30,16 +30,16 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.VideoEncodingService;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.VideoEncodingService;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.AnimatedFloat;

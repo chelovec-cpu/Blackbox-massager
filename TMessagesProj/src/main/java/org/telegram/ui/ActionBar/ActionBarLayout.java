@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -8,10 +8,10 @@
 
 package org.telegram.ui.ActionBar;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.dpf2;
-import static org.telegram.messenger.AndroidUtilities.lerp;
-import static org.telegram.messenger.Utilities.clamp01;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.Utilities.clamp01;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -62,17 +62,17 @@ import androidx.core.math.MathUtils;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimationNotificationsLocker;
-import org.telegram.messenger.BuildConfig;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.utils.ViewOutlineProviderImpl;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.AnimationNotificationsLocker;
+import com.blackbox.messenger.BuildConfig;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.ImageLoader;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.utils.ViewOutlineProviderImpl;
 import org.telegram.ui.ChatActivity;
 import org.telegram.ui.Components.AnimatedFloat;
 import org.telegram.ui.Components.BackButtonMenu;

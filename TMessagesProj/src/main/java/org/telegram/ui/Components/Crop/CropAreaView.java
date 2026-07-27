@@ -28,7 +28,7 @@ import android.view.animation.Interpolator;
 import androidx.annotation.Keep;
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.AndroidUtilities;
+import com.blackbox.messenger.AndroidUtilities;
 import org.telegram.ui.BubbleActivity;
 
 public class CropAreaView extends ViewGroup {

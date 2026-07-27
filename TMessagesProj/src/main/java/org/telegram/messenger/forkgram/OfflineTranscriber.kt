@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
 import java.util.function.BiConsumer
 import java.util.function.Consumer

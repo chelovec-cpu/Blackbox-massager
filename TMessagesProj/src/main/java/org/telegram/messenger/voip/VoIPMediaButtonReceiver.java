@@ -1,4 +1,4 @@
-package org.telegram.messenger.voip;
+package com.blackbox.messenger.voip;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

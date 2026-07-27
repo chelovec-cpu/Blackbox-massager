@@ -1,18 +1,18 @@
-package org.telegram.messenger.voip;
+package com.blackbox.messenger.voip;
 
 import android.util.LongSparseArray;
 
 import androidx.annotation.Nullable;
 
 import org.json.JSONObject;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BaseController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BaseController;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.json.TLJsonBuilder;
 import org.telegram.tgnet.TLRPC;

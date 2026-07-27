@@ -1,14 +1,14 @@
 package org.telegram.ui.Components.poll.attached;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.graphics.Canvas;
 import android.text.TextUtils;
 import android.view.View;
 
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.MessageObject;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.MessageObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.MediaActionDrawable;

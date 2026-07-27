@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -13,8 +13,8 @@ import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.SharedConfig;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.SharedConfig;
 import org.telegram.ui.ActionBar.Theme;
 
 public class URLSpanMono extends MetricAffectingSpan {

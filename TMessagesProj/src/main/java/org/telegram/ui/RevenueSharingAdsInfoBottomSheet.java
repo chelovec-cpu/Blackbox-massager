@@ -1,7 +1,7 @@
 package org.telegram.ui;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.LocaleController.getString;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -26,13 +26,13 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.browser.Browser;
 import org.telegram.ui.ActionBar.BaseFragment;
 import org.telegram.ui.ActionBar.BottomSheet;
 import org.telegram.ui.ActionBar.Theme;

@@ -1,12 +1,12 @@
 package org.telegram.ui.Gifts;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.replaceArrows;
-import static org.telegram.messenger.LocaleController.formatNumber;
-import static org.telegram.messenger.LocaleController.formatPluralString;
-import static org.telegram.messenger.LocaleController.formatSpannable;
-import static org.telegram.messenger.LocaleController.formatString;
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.replaceArrows;
+import static com.blackbox.messenger.LocaleController.formatNumber;
+import static com.blackbox.messenger.LocaleController.formatPluralString;
+import static com.blackbox.messenger.LocaleController.formatSpannable;
+import static com.blackbox.messenger.LocaleController.formatString;
+import static com.blackbox.messenger.LocaleController.getString;
 import static org.telegram.ui.Stars.StarGiftSheet.replaceUnderstood;
 
 import android.content.Context;
@@ -32,16 +32,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.GiftAuctionController;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.utils.tlutils.TlUtils;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.GiftAuctionController;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.utils.tlutils.TlUtils;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.tl.TL_stars;

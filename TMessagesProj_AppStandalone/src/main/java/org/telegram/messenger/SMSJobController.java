@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -28,7 +28,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RequiresPermission;
 
 import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.web.R;
+import com.blackbox.messenger.web.R;
 import org.telegram.tgnet.AbstractSerializedData;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.InputSerializedData;

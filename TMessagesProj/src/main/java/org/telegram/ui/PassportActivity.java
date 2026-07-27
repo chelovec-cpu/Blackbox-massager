@@ -67,29 +67,29 @@ import androidx.core.graphics.ColorUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.DownloadController;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MrzRecognizer;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.PushListenerController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SRPHelper;
-import org.telegram.messenger.SecureDocument;
-import org.telegram.messenger.SecureDocumentKey;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.DownloadController;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.ImageLoader;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MrzRecognizer;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.PushListenerController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SRPHelper;
+import com.blackbox.messenger.SecureDocument;
+import com.blackbox.messenger.SecureDocumentKey;
+import com.blackbox.messenger.SendMessagesHelper;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.browser.Browser;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.RequestDelegate;
 import org.telegram.tgnet.TLObject;
@@ -1517,7 +1517,7 @@ public class PassportActivity extends BaseFragment implements NotificationCenter
 
         FrameLayout frameLayout = (FrameLayout) fragmentView;
 
-        actionBar.setTitle(LocaleController.getString(R.string.TelegramPassport));
+        actionBar.setTitle(LocaleController.getString(R.string.Blackbox MessengerPassport));
 
         emptyView = new EmptyTextProgressView(context);
         emptyView.showProgress();
@@ -1553,7 +1553,7 @@ public class PassportActivity extends BaseFragment implements NotificationCenter
         noPasswordTextView.setGravity(Gravity.CENTER_HORIZONTAL);
         noPasswordTextView.setPadding(AndroidUtilities.dp(21), AndroidUtilities.dp(10), AndroidUtilities.dp(21), AndroidUtilities.dp(17));
         noPasswordTextView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteGrayText4));
-        noPasswordTextView.setText(LocaleController.getString(R.string.TelegramPassportCreatePasswordInfo));
+        noPasswordTextView.setText(LocaleController.getString(R.string.Blackbox MessengerPassportCreatePasswordInfo));
         linearLayout2.addView(noPasswordTextView, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, (LocaleController.isRTL ? Gravity.RIGHT : Gravity.LEFT) | Gravity.TOP, 21, 10, 21, 0));
 
         noPasswordSetTextView = new TextView(context);
@@ -1561,7 +1561,7 @@ public class PassportActivity extends BaseFragment implements NotificationCenter
         noPasswordSetTextView.setGravity(Gravity.CENTER);
         noPasswordSetTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
         noPasswordSetTextView.setTypeface(AndroidUtilities.bold());
-        noPasswordSetTextView.setText(LocaleController.getString(R.string.TelegramPassportCreatePassword));
+        noPasswordSetTextView.setText(LocaleController.getString(R.string.Blackbox MessengerPassportCreatePassword));
         linearLayout2.addView(noPasswordSetTextView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 24, (LocaleController.isRTL ? Gravity.RIGHT : Gravity.LEFT) | Gravity.TOP, 21, 9, 21, 0));
         noPasswordSetTextView.setOnClickListener(v -> {
             TwoStepVerificationSetupActivity activity = new TwoStepVerificationSetupActivity(currentAccount, TwoStepVerificationSetupActivity.TYPE_CREATE_PASSWORD_STEP_1, currentPassword);
@@ -1993,7 +1993,7 @@ public class PassportActivity extends BaseFragment implements NotificationCenter
 
         FrameLayout frameLayout = (FrameLayout) fragmentView;
 
-        actionBar.setTitle(LocaleController.getString(R.string.TelegramPassport));
+        actionBar.setTitle(LocaleController.getString(R.string.Blackbox MessengerPassport));
 
         actionBar.createMenu().addItem(info_item, R.drawable.msg_info);
 
@@ -2423,7 +2423,7 @@ public class PassportActivity extends BaseFragment implements NotificationCenter
     private void createManageInterface(Context context) {
         FrameLayout frameLayout = (FrameLayout) fragmentView;
 
-        actionBar.setTitle(LocaleController.getString(R.string.TelegramPassport));
+        actionBar.setTitle(LocaleController.getString(R.string.Blackbox MessengerPassport));
 
         actionBar.createMenu().addItem(info_item, R.drawable.msg_info);
 
@@ -2445,12 +2445,12 @@ public class PassportActivity extends BaseFragment implements NotificationCenter
         deletePassportCell = new TextSettingsCell(context);
         deletePassportCell.setTextColor(Theme.getColor(Theme.key_text_RedRegular));
         deletePassportCell.setBackgroundDrawable(Theme.getSelectorDrawable(true));
-        deletePassportCell.setText(LocaleController.getString(R.string.TelegramPassportDelete), false);
+        deletePassportCell.setText(LocaleController.getString(R.string.Blackbox MessengerPassportDelete), false);
         linearLayout2.addView(deletePassportCell, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT));
         deletePassportCell.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(getParentActivity());
-            builder.setTitle(LocaleController.getString(R.string.TelegramPassportDeleteTitle));
-            builder.setMessage(LocaleController.getString(R.string.TelegramPassportDeleteAlert));
+            builder.setTitle(LocaleController.getString(R.string.Blackbox MessengerPassportDeleteTitle));
+            builder.setMessage(LocaleController.getString(R.string.Blackbox MessengerPassportDeleteAlert));
             builder.setPositiveButton(LocaleController.getString(R.string.Delete), (dialog, which) -> {
                 TL_account.deleteSecureValue req = new TL_account.deleteSecureValue();
                 for (int a = 0; a < currentForm.values.size(); a++) {

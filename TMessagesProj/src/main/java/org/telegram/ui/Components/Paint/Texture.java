@@ -6,7 +6,7 @@ import android.opengl.GLUtils;
 import android.os.Build;
 import android.util.Log;
 
-import org.telegram.messenger.FileLog;
+import com.blackbox.messenger.FileLog;
 import org.telegram.ui.Components.Size;
 
 import java.nio.ByteBuffer;

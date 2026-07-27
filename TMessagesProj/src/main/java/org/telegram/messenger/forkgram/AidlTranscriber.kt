@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
 import android.content.ComponentName
 import android.content.Context
@@ -15,7 +15,7 @@ import org.opentranscribe.api.ITranscriptionSession
 import org.opentranscribe.api.TranscriberCapabilities
 import org.opentranscribe.api.TranscriptionError
 import org.opentranscribe.api.TranscriptionRequest
-import org.telegram.messenger.ApplicationLoader
+import com.blackbox.messenger.ApplicationLoader
 import java.io.File
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.ExecutorService

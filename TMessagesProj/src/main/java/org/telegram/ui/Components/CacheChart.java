@@ -1,8 +1,8 @@
 package org.telegram.ui.Components;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.dpf2;
-import static org.telegram.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -27,10 +27,10 @@ import android.view.View;
 
 import com.google.zxing.common.detector.MathUtils;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LiteMode;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SvgHelper;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.LiteMode;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SvgHelper;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.Premium.StarParticlesView;
 

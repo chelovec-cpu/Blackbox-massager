@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.Premium;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
@@ -23,13 +23,13 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.LiteMode;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.SvgHelper;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.LiteMode;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.SvgHelper;
+import com.blackbox.messenger.Utilities;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.GLIconSettingsView;
 import org.telegram.ui.PremiumPreviewFragment;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support;
+package com.blackbox.messenger.support;
 
 import java.lang.reflect.Array;
 

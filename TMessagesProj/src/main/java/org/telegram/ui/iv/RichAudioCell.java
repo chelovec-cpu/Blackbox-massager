@@ -1,6 +1,6 @@
 package org.telegram.ui.iv;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -19,14 +19,14 @@ import android.widget.FrameLayout;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.DownloadController;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.UserConfig;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.DownloadController;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.ImageLoader;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.UserConfig;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_iv;
 import org.telegram.ui.ActionBar.Theme;

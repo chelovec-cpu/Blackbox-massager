@@ -14,10 +14,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimationNotificationsLocker;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.UserConfig;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.AnimationNotificationsLocker;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.UserConfig;
 import org.telegram.ui.Components.CubicBezierInterpolator;
 import org.telegram.ui.VoIPFragment;
 import org.webrtc.OrientationHelper;

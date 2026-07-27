@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.ui.Components.Paint.PersistColorPalette;

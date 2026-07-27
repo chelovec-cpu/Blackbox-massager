@@ -1,6 +1,6 @@
 package org.telegram.ui.community;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -16,9 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.R;
-import org.telegram.messenger.utils.DrawableUtils;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.utils.DrawableUtils;
 import org.telegram.ui.ActionBar.Theme;
 
 public class CommunityArrowDrawable extends Drawable {

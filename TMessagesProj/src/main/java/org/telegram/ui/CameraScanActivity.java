@@ -1,6 +1,6 @@
 package org.telegram.ui;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.Manifest;
 import android.animation.Animator;
@@ -64,20 +64,20 @@ import com.google.zxing.ResultPoint;
 import com.google.zxing.common.GlobalHistogramBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MrzRecognizer;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.camera.CameraController;
-import org.telegram.messenger.camera.CameraSessionWrapper;
-import org.telegram.messenger.camera.CameraView;
-import org.telegram.messenger.camera.Size;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.ImageLoader;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MrzRecognizer;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SendMessagesHelper;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.camera.CameraController;
+import com.blackbox.messenger.camera.CameraSessionWrapper;
+import com.blackbox.messenger.camera.CameraView;
+import com.blackbox.messenger.camera.Size;
 import org.telegram.ui.ActionBar.ActionBar;
 import org.telegram.ui.ActionBar.BaseFragment;
 import org.telegram.ui.ActionBar.BottomSheet;

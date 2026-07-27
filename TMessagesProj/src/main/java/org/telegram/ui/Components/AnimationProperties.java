@@ -7,7 +7,7 @@ import android.graphics.drawable.ShapeDrawable;
 import android.util.Property;
 import android.view.animation.OvershootInterpolator;
 
-import org.telegram.messenger.ImageReceiver;
+import com.blackbox.messenger.ImageReceiver;
 import org.telegram.ui.Cells.DialogCell;
 import org.telegram.ui.PhotoViewer;
 

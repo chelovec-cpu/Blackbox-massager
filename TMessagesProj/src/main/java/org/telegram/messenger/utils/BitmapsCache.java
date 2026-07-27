@@ -1,4 +1,4 @@
-package org.telegram.messenger.utils;
+package com.blackbox.messenger.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,13 +8,13 @@ import android.os.SystemClock;
 import com.google.android.exoplayer2.util.Log;
 import com.google.common.util.concurrent.AtomicDouble;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.DispatchQueuePoolBackground;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.DispatchQueuePoolBackground;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.Utilities;
 import org.telegram.ui.Components.RLottieDrawable;
 
 import java.io.File;

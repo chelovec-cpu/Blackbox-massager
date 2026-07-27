@@ -7,8 +7,8 @@ import android.text.TextUtils;
 import android.util.LongSparseArray;
 import android.view.View;
 
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_stats;

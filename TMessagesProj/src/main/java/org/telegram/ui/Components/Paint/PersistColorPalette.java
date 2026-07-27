@@ -3,8 +3,8 @@ package org.telegram.ui.Components.Paint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.UserConfig;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.UserConfig;
 import org.telegram.ui.Components.Paint.Views.PaintTextOptionsView;
 
 import java.util.ArrayList;

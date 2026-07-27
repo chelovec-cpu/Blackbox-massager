@@ -6,9 +6,9 @@ import android.text.SpannableStringBuilder;
 import android.view.Gravity;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BillingController;
-import org.telegram.messenger.LocaleController;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BillingController;
+import com.blackbox.messenger.LocaleController;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.CheckBox2;

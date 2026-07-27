@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
 import android.content.ComponentName
 import android.content.Context
@@ -9,8 +9,8 @@ import android.os.Looper
 import dev.davidv.translator.ITranslationCallback
 import dev.davidv.translator.ITranslationService
 import dev.davidv.translator.TranslationError
-import org.telegram.messenger.ApplicationLoader
-import org.telegram.messenger.MessagesController
+import com.blackbox.messenger.ApplicationLoader
+import com.blackbox.messenger.MessagesController
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicReference

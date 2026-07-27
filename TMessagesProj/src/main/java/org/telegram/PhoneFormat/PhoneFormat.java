@@ -26,8 +26,8 @@ package org.telegram.PhoneFormat;
 
 import androidx.annotation.NonNull;
 
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.FileLog;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;

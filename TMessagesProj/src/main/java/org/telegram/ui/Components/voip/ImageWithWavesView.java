@@ -11,9 +11,9 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.LiteMode;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.LiteMode;
 import org.telegram.ui.Components.BackupImageView;
 import org.telegram.ui.Components.CubicBezierInterpolator;
 import org.telegram.ui.Components.LayoutHelper;

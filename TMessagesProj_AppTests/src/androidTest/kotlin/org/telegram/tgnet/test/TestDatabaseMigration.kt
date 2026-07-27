@@ -3,9 +3,9 @@ package org.telegram.tgnet.test
 import org.junit.Test
 import org.telegram.SQLite.SQLiteCursor
 import org.telegram.SQLite.SQLiteDatabase
-import org.telegram.messenger.ApplicationLoader
-import org.telegram.messenger.DatabaseMigrationHelper
-import org.telegram.messenger.MessagesStorage
+import com.blackbox.messenger.ApplicationLoader
+import com.blackbox.messenger.DatabaseMigrationHelper
+import com.blackbox.messenger.MessagesStorage
 import java.io.File
 
 class TestDatabaseMigration {

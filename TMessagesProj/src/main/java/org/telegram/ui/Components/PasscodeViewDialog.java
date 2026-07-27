@@ -17,10 +17,10 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.core.view.WindowInsetsCompat;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
 import org.telegram.ui.ActionBar.DrawerLayoutContainer;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.LaunchActivity;

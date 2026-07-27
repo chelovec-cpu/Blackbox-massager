@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -50,10 +50,10 @@ import org.telegram.SQLite.SQLiteCursor;
 import org.telegram.SQLite.SQLiteDatabase;
 import org.telegram.SQLite.SQLiteException;
 import org.telegram.SQLite.SQLitePreparedStatement;
-import org.telegram.messenger.forkgram.HiddenAccountHelper;
-import org.telegram.messenger.ringtone.RingtoneDataStore;
-import org.telegram.messenger.ringtone.RingtoneUploader;
-import org.telegram.messenger.utils.EphemeralMessagesHelper;
+import com.blackbox.messenger.forkgram.HiddenAccountHelper;
+import com.blackbox.messenger.ringtone.RingtoneDataStore;
+import com.blackbox.messenger.ringtone.RingtoneUploader;
+import com.blackbox.messenger.utils.EphemeralMessagesHelper;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.NativeByteBuffer;
 import org.telegram.tgnet.RequestDelegate;
@@ -87,7 +87,7 @@ import org.telegram.ui.Components.URLSpanReplacement;
 import org.telegram.ui.Components.URLSpanUserMention;
 import org.telegram.ui.LaunchActivity;
 import org.telegram.ui.PremiumPreviewFragment;
-import org.telegram.messenger.utils.tlutils.AmountUtils;
+import com.blackbox.messenger.utils.tlutils.AmountUtils;
 import org.telegram.ui.Stories.StoriesStorage;
 
 import java.io.File;
@@ -128,7 +128,7 @@ public class MediaDataController extends BaseController {
             SPOILER_PATTERN = Pattern.compile("\\|\\|(.+?)\\|\\|"),
             STRIKE_PATTERN = Pattern.compile("~~(.+?)~~");
 
-    public static String SHORTCUT_CATEGORY = "org.telegram.messenger.SHORTCUT_SHARE";
+    public static String SHORTCUT_CATEGORY = "com.blackbox.messenger.SHORTCUT_SHARE";
 
     private static volatile MediaDataController[] Instance = new MediaDataController[UserConfig.MAX_ACCOUNT_COUNT];
     private static final Object[] lockObjects = new Object[UserConfig.MAX_ACCOUNT_COUNT];
@@ -2285,7 +2285,7 @@ public class MediaDataController extends BaseController {
                 ArrayList<Long> unread = new ArrayList<>();
                 int date = 0;
                 long hash = 0;
-                boolean premium = false;
+                boolean premium = true;
                 SQLiteCursor cursor = null;
                 try {
                     cursor = getMessagesStorage().getDatabase().queryFinalized("SELECT data, unread, date, hash, premium FROM stickers_featured WHERE emoji = " + (emoji ? 1 : 0) + " AND id = " + (emoji ? 2 : 1));

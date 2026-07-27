@@ -1,15 +1,15 @@
-package org.telegram.messenger.forkgram;
+package com.blackbox.messenger.forkgram;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.SystemClock;
 import android.util.Base64;
 
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.ConnectionsManager;
 
 import java.nio.charset.StandardCharsets;

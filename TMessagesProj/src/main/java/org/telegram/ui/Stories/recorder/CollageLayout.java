@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.BuildVars;
+import com.blackbox.messenger.BuildVars;
 
 import java.util.ArrayList;
 

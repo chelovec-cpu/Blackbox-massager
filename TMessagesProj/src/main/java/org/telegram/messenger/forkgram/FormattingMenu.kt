@@ -1,14 +1,14 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
 import android.graphics.Typeface
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.TextUtils
 
-import org.telegram.messenger.AndroidUtilities
-import org.telegram.messenger.LocaleController
-import org.telegram.messenger.MessagesController
-import org.telegram.messenger.R
+import com.blackbox.messenger.AndroidUtilities
+import com.blackbox.messenger.LocaleController
+import com.blackbox.messenger.MessagesController
+import com.blackbox.messenger.R
 import org.telegram.ui.Components.TextStyleSpan
 import org.telegram.ui.Components.TypefaceSpan
 

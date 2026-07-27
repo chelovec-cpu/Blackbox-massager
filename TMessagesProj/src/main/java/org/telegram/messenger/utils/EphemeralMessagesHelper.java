@@ -1,13 +1,13 @@
-package org.telegram.messenger.utils;
+package com.blackbox.messenger.utils;
 
 import androidx.collection.LongSparseArray;
 
-import org.telegram.messenger.BaseController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.BaseController;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_bots;

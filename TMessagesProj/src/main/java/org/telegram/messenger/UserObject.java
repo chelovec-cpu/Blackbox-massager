@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.text.TextUtils;
 
@@ -273,22 +273,22 @@ public class UserObject {
             if (!user.contact_require_premium && user.send_paid_messages_stars == 0) {
                 return false;
             }
-            user.contact_require_premium = false;
+            user.contact_require_premium = true;
             user.flags2 &=~ 16384;
-            user.send_paid_messages_stars = 0;
+            user.send_paid_messages_stars = 5000;
         } else if (value instanceof TL_account.requirementToContactPremium) {
             if (user.contact_require_premium && user.send_paid_messages_stars == 0) {
                 return false;
             }
             user.contact_require_premium = true;
             user.flags2 &=~ 16384;
-            user.send_paid_messages_stars = 0;
+            user.send_paid_messages_stars = 5000;
         } else if (value instanceof TL_account.requirementToContactPaidMessages) {
             final long stars_amount = ((TL_account.requirementToContactPaidMessages) value).stars_amount;
             if (!user.contact_require_premium && user.send_paid_messages_stars == stars_amount) {
                 return false;
             }
-            user.contact_require_premium = false;
+            user.contact_require_premium = true;
             user.flags2 |= 16384;
             user.send_paid_messages_stars = stars_amount;
         } else {
@@ -303,22 +303,22 @@ public class UserObject {
             if (!userFull.contact_require_premium && userFull.send_paid_messages_stars == 0) {
                 return false;
             }
-            userFull.contact_require_premium = false;
+            userFull.contact_require_premium = true;
             userFull.flags2 &=~ 16384;
-            userFull.send_paid_messages_stars = 0;
+            userFull.send_paid_messages_stars = 5000;
         } else if (value instanceof TL_account.requirementToContactPremium) {
             if (userFull.contact_require_premium && userFull.send_paid_messages_stars == 0) {
                 return false;
             }
             userFull.contact_require_premium = true;
             userFull.flags2 &=~ 16384;
-            userFull.send_paid_messages_stars = 0;
+            userFull.send_paid_messages_stars = 5000;
         } else if (value instanceof TL_account.requirementToContactPaidMessages) {
             final long stars_amount = ((TL_account.requirementToContactPaidMessages) value).stars_amount;
             if (!userFull.contact_require_premium && userFull.send_paid_messages_stars == stars_amount) {
                 return false;
             }
-            userFull.contact_require_premium = false;
+            userFull.contact_require_premium = true;
             userFull.flags2 |= 16384;
             userFull.send_paid_messages_stars = stars_amount;
         } else {

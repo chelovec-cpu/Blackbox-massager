@@ -18,8 +18,8 @@ import android.view.ViewGroup;
 
 import androidx.core.util.Consumer;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.Utilities;
 import org.telegram.ui.Components.CubicBezierInterpolator;
 
 public class PipettePickerView extends View {

@@ -17,8 +17,8 @@ import org.telegram.tlrpc.SchemeTlValidator
 import org.telegram.tlrpc.models.RULES
 import org.telegram.tlrpc.models.TlObjectWithLayer
 import org.telegram.tlrpc.schema.TlSchemaJsonParser
-import org.telegram.tlrpc.telegram.TelegramCodeParser
-import org.telegram.tlrpc.telegram.TelegramTlClass
+import org.telegram.tlrpc.telegram.Blackbox MessengerCodeParser
+import org.telegram.tlrpc.telegram.Blackbox MessengerTlClass
 import java.io.File
 
 abstract class GenerateSchemeTask : DefaultTask() {
@@ -62,16 +62,16 @@ abstract class GenerateSchemeTask : DefaultTask() {
                 add(smsjobsFile)
             }
 
-        val telegramClasses = TelegramCodeParser.parse(files)
+        val telegramClasses = Blackbox MessengerCodeParser.parse(files)
         val tlSchemaFull = TlSchemaJsonParser.parse(resourcesDir, LAYER)
         val tlSchemaFilter = tlSchemaFull.applyRules(RULES.rules)
 
-        val undefinedTelegramClasses = telegramClasses.groupedByConstructorAll.filterKeys {
+        val undefinedBlackbox MessengerClasses = telegramClasses.groupedByConstructorAll.filterKeys {
             it !in tlSchemaFull.magicsAll
         }.values.flatten()
 
         File(outputDir, "not_linked_classes.txt")
-            .writeText(undefinedTelegramClasses.map { it.toString() }.sorted().joinToString("\n"))
+            .writeText(undefinedBlackbox MessengerClasses.map { it.toString() }.sorted().joinToString("\n"))
 
         val totalHistory = tlSchemaFull.getAllConstructorsHistory()
         val classesByUniqueIds = telegramClasses.groupedByConstructorUnique
@@ -125,13 +125,13 @@ abstract class GenerateSchemeTask : DefaultTask() {
 
         // === Линковка ===
 
-        val linkedObjects = mutableSetOf<Pair<TlObjectWithLayer, TelegramTlClass>>()
+        val linkedObjects = mutableSetOf<Pair<TlObjectWithLayer, Blackbox MessengerTlClass>>()
         linkObjectsByUniqueId(classesByUniqueIds, constructorsByUniqueIds, linkedObjects)
 
         val linkedConstructors = linkedObjects.toSet()
         linkObjectsByUniqueId(classesByUniqueIds, methodsByUniqueIds, linkedObjects)
 
-        val linkedTypes = mutableSetOf<Pair<String, TelegramTlClass>>()
+        val linkedTypes = mutableSetOf<Pair<String, Blackbox MessengerTlClass>>()
         linkTypesBySinglePredicate(classesByUniqueIds, constructorTypesMap, linkedTypes)
         linkTypesByLinkedObjects(telegramClasses.classes, linkedConstructors, linkedTypes)
 
@@ -201,7 +201,7 @@ abstract class GenerateSchemeTask : DefaultTask() {
     private fun generateSchemeTestClassForType(
         constructors: List<TlObjectWithLayer>,
         encrypted: List<TlObjectWithLayer>,
-        linkedTypes: Set<Pair<String, TelegramTlClass>>,
+        linkedTypes: Set<Pair<String, Blackbox MessengerTlClass>>,
         comments: List<Map<String, List<List<String>>>>
     ) {
         val packageName = "org.telegram.tgnet.test.generated"
@@ -284,9 +284,9 @@ abstract class GenerateSchemeTask : DefaultTask() {
     // =========================================================
 
     private fun linkObjectsByUniqueId(
-        classesByUniqueIds: Map<UInt, TelegramTlClass>,
+        classesByUniqueIds: Map<UInt, Blackbox MessengerTlClass>,
         objectsByUniqueIds: Map<UInt, TlObjectWithLayer>,
-        output: MutableSet<Pair<TlObjectWithLayer, TelegramTlClass>>
+        output: MutableSet<Pair<TlObjectWithLayer, Blackbox MessengerTlClass>>
     ) {
         for (entry in objectsByUniqueIds) {
             val clazz = classesByUniqueIds[entry.value.tl.key.constructorId] ?: continue
@@ -295,9 +295,9 @@ abstract class GenerateSchemeTask : DefaultTask() {
     }
 
     private fun linkTypesBySinglePredicate(
-        classesByUniqueIds: Map<UInt, TelegramTlClass>,
+        classesByUniqueIds: Map<UInt, Blackbox MessengerTlClass>,
         predicatesByType: Map<String, List<TlObjectWithLayer>>,
-        output: MutableSet<Pair<String, TelegramTlClass>>
+        output: MutableSet<Pair<String, Blackbox MessengerTlClass>>
     ) {
         for (constructor in predicatesByType.filterValues { it.size == 1 }.values.flatten()) {
             val clazz = classesByUniqueIds[constructor.tl.key.constructorId] ?: continue
@@ -307,9 +307,9 @@ abstract class GenerateSchemeTask : DefaultTask() {
     }
 
     private fun linkTypesByLinkedObjects(
-        classes: Set<TelegramTlClass>,
-        linkedObjects: Set<Pair<TlObjectWithLayer, TelegramTlClass>>,
-        output: MutableSet<Pair<String, TelegramTlClass>>
+        classes: Set<Blackbox MessengerTlClass>,
+        linkedObjects: Set<Pair<TlObjectWithLayer, Blackbox MessengerTlClass>>,
+        output: MutableSet<Pair<String, Blackbox MessengerTlClass>>
     ) {
         val linkedClassesMap = linkedObjects
             .map { it.second to it.first }

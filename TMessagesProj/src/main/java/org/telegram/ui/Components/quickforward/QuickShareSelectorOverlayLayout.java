@@ -8,13 +8,13 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.MediaDataController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.Cells.ChatMessageCell;
 import org.telegram.ui.Components.Bulletin;

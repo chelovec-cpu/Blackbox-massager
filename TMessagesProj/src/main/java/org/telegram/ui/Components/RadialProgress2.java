@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 2.0.x.
+ * This is the source code of Blackbox Messenger for Android v. 2.0.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -18,9 +18,9 @@ import android.view.View;
 
 import androidx.annotation.Keep;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.ImageReceiver;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 

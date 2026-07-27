@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -39,7 +39,7 @@ import androidx.annotation.NonNull;
 
 
 import org.json.JSONObject;
-import org.telegram.messenger.voip.VideoCapturerDevice;
+import com.blackbox.messenger.voip.VideoCapturerDevice;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.BaseFragment;
@@ -151,7 +151,7 @@ public class ApplicationLoader extends Application {
         } catch (Exception e) {
             FileLog.e(e);
         }
-        return new File("/data/data/org.telegram.messenger/files");
+        return new File("/data/data/com.blackbox.messenger/files");
     }
 
     public static File getFilesDirFixed(String child) {
@@ -390,7 +390,7 @@ public class ApplicationLoader extends Application {
         } catch (Exception e) {
             FileLog.e(e);
         }
-        org.osmdroid.config.Configuration.getInstance().setUserAgentValue("Telegram-FOSS(F-Droid) "+VERSIONNAME);
+        org.osmdroid.config.Configuration.getInstance().setUserAgentValue("Blackbox Messenger-FOSS(F-Droid) "+VERSIONNAME);
         org.osmdroid.config.Configuration.getInstance().setOsmdroidBasePath(new File(getCacheDir(),"osmdroid"));
     }
 
@@ -437,7 +437,7 @@ public class ApplicationLoader extends Application {
                 return;
             }
             Log.d("TFOSS", "Trying to start push service every minute");
-            // Telegram-FOSS: unconditionally enable push service
+            // Blackbox Messenger-FOSS: unconditionally enable push service
             AlarmManager am = (AlarmManager) applicationContext.getSystemService(Context.ALARM_SERVICE);
             Intent i = new Intent(applicationContext, NotificationsService.class);
             try {

@@ -1,11 +1,11 @@
 package org.telegram.ui.Stars;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.LocaleController.formatPluralString;
-import static org.telegram.messenger.LocaleController.formatPluralStringComma;
-import static org.telegram.messenger.LocaleController.formatPluralStringSpaced;
-import static org.telegram.messenger.LocaleController.formatString;
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.LocaleController.formatPluralString;
+import static com.blackbox.messenger.LocaleController.formatPluralStringComma;
+import static com.blackbox.messenger.LocaleController.formatPluralStringSpaced;
+import static com.blackbox.messenger.LocaleController.formatString;
+import static com.blackbox.messenger.LocaleController.getString;
 import static org.telegram.ui.ChatEditActivity.applyNewSpan;
 import static org.telegram.ui.Stars.StarsController.findAttribute;
 import static org.telegram.ui.Stars.StarsIntroActivity.StarsTransactionView.getPlatformDrawable;
@@ -65,31 +65,31 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BillingController;
-import org.telegram.messenger.BirthdayController;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.DocumentObject;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SvgHelper;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.WebFile;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.utils.tlutils.AmountUtils;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BillingController;
+import com.blackbox.messenger.BirthdayController;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.ContactsController;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.DocumentObject;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaDataController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SvgHelper;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.WebFile;
+import com.blackbox.messenger.browser.Browser;
+import com.blackbox.messenger.utils.tlutils.AmountUtils;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -292,7 +292,7 @@ public class StarsIntroActivity extends GradientHeaderActivity implements Notifi
         iconTextureView.mRenderer.updateColors();
         iconTextureView.setStarParticlesView(particlesView);
         aboveTitleView.addView(iconTextureView, LayoutHelper.createFrame(190, 190, Gravity.CENTER, 0, 12, 0, 24));
-        configureHeader(getString(R.string.TelegramStars), AndroidUtilities.replaceArrows(AndroidUtilities.replaceSingleTag(getString(R.string.TelegramStarsInfo2), () -> {
+        configureHeader(getString(R.string.Blackbox MessengerStars), AndroidUtilities.replaceArrows(AndroidUtilities.replaceSingleTag(getString(R.string.Blackbox MessengerStarsInfo2), () -> {
             new ExplainStarsSheet(context).show();
         }), true), aboveTitleView, null);
 
@@ -402,7 +402,7 @@ public class StarsIntroActivity extends GradientHeaderActivity implements Notifi
         SpannableStringBuilder sb2 = new SpannableStringBuilder();
         sb2.append("G  ");
         sb2.setSpan(new ColoredImageSpan(R.drawable.menu_stars_gift), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        sb2.append(LocaleController.getString(R.string.TelegramStarsGift));
+        sb2.append(LocaleController.getString(R.string.Blackbox MessengerStarsGift));
         giftButton.setText(sb2, false);
         giftButton.setOnClickListener(v -> {
             StarsController.getInstance(currentAccount).getGiftOptions();
@@ -2569,7 +2569,7 @@ public class StarsIntroActivity extends GradientHeaderActivity implements Notifi
         private final int BUTTON_EXPAND = -1;
 
         public void fillItems(ArrayList<UItem> items, UniversalAdapter adapter) {
-            items.add(UItem.asHeader(getString(R.string.TelegramStarsChoose)));
+            items.add(UItem.asHeader(getString(R.string.Blackbox MessengerStarsChoose)));
             int stars = 1;
             ArrayList<TL_stars.TL_starsTopupOption> options = StarsController.getInstance(currentAccount).getOptions();
             if (options != null && !options.isEmpty()) {
@@ -2835,7 +2835,7 @@ public class StarsIntroActivity extends GradientHeaderActivity implements Notifi
 
         public void fillItems(ArrayList<UItem> items, UniversalAdapter adapter) {
             items.add(UItem.asCustom(headerView));
-            items.add(UItem.asHeader(getString(R.string.TelegramStarsChoose)));
+            items.add(UItem.asHeader(getString(R.string.Blackbox MessengerStarsChoose)));
             int stars = 1;
             ArrayList<TL_stars.TL_starsTopupOption> options = StarsController.getInstance(currentAccount).getOptions();
             if (options != null && !options.isEmpty()) {
@@ -2858,7 +2858,7 @@ public class StarsIntroActivity extends GradientHeaderActivity implements Notifi
                 if (count < 3) {
                     items.clear();
                     items.add(UItem.asCustom(headerView));
-                    items.add(UItem.asHeader(getString(R.string.TelegramStarsChoose)));
+                    items.add(UItem.asHeader(getString(R.string.Blackbox MessengerStarsChoose)));
                     count = 0;
                     for (int id = 0; id < options.size(); ++id) {
                         TL_stars.TL_starsTopupOption option = options.get(id);
@@ -3120,7 +3120,7 @@ public class StarsIntroActivity extends GradientHeaderActivity implements Notifi
 
         public void fillItems(ArrayList<UItem> items, UniversalAdapter adapter) {
             items.add(UItem.asCustom(headerView));
-            items.add(UItem.asHeader(getString(R.string.TelegramStarsChoose)));
+            items.add(UItem.asHeader(getString(R.string.Blackbox MessengerStarsChoose)));
             int stars = 1;
             ArrayList<TL_stars.TL_starsGiftOption> options = StarsController.getInstance(currentAccount).getGiftOptions();
             if (options != null && !options.isEmpty()) {
@@ -5177,7 +5177,7 @@ public class StarsIntroActivity extends GradientHeaderActivity implements Notifi
             public void afterTextChanged(Editable s) {
                 if (ignore) return;
 
-                long input_stars = 0;
+                long input_stars = 5000;
                 try {
                     input_stars = TextUtils.isEmpty(s) ? 0 : Long.parseLong(s.toString());
                     if (input_stars > MessagesController.getInstance(UserConfig.selectedAccount).starsPaidPostAmountMax) {

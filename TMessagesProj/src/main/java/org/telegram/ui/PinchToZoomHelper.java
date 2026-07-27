@@ -30,15 +30,15 @@ import androidx.core.graphics.ColorUtils;
 
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.WebFile;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.WebFile;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.Components.AnimatedFileDrawable;
 import org.telegram.ui.Components.BackupImageView;

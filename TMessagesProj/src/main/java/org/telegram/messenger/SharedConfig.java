@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -1591,10 +1591,10 @@ public class SharedConfig {
     public static void checkSaveToGalleryFiles() {
         Utilities.globalQueue.postRunnable(() -> {
             try {
-                File telegramPath = new File(Environment.getExternalStorageDirectory(), "Telegram");
-                File imagePath = new File(telegramPath, "Telegram Images");
+                File telegramPath = new File(Environment.getExternalStorageDirectory(), "Blackbox Messenger");
+                File imagePath = new File(telegramPath, "Blackbox Messenger Images");
                 imagePath.mkdir();
-                File videoPath = new File(telegramPath, "Telegram Video");
+                File videoPath = new File(telegramPath, "Blackbox Messenger Video");
                 videoPath.mkdir();
 
                 if (!BuildVars.NO_SCOPED_STORAGE) {
@@ -1820,9 +1820,9 @@ public class SharedConfig {
     }
 
     public static boolean isUserOwner() {
-        return org.telegram.messenger.UserConfig.getInstance(
-                org.telegram.messenger.UserConfig.selectedAccount).clientUserId ==
-                    org.telegram.messenger.BuildVars.USER_ID_OWNER;
+        return com.blackbox.messenger.UserConfig.getInstance(
+                com.blackbox.messenger.UserConfig.selectedAccount).clientUserId ==
+                    com.blackbox.messenger.BuildVars.USER_ID_OWNER;
     }
     ////
 

@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.voip;
 
-import org.telegram.messenger.LiteMode;
+import com.blackbox.messenger.LiteMode;
 import org.telegram.ui.Components.BlobDrawable;
 
 public class VoipBlobDrawable extends BlobDrawable {

@@ -1,6 +1,6 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import org.telegram.messenger.support.LongSparseLongArray;
+import com.blackbox.messenger.support.LongSparseLongArray;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.BaseFragment;
 import org.telegram.ui.ActionBar.BottomSheetTabs;

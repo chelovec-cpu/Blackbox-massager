@@ -19,8 +19,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.customview.widget.ExploreByTouchHelper;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.NotificationCenter;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.NotificationCenter;
 import org.telegram.tgnet.tl.TL_iv;
 import org.telegram.ui.ArticleViewer;
 import org.telegram.ui.Cells.TextSelectionHelper;
@@ -42,7 +42,7 @@ import static android.view.Gravity.RELATIVE_LAYOUT_DIRECTION;
 import static android.view.Gravity.VERTICAL_GRAVITY_MASK;
 import static android.view.View.MeasureSpec.EXACTLY;
 import static android.view.View.MeasureSpec.makeMeasureSpec;
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 

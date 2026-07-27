@@ -4,7 +4,7 @@ import android.net.Uri;
 import android.util.Base64;
 import android.util.SparseArray;
 
-import org.telegram.messenger.utils.tlutils.TlUtils;
+import com.blackbox.messenger.utils.tlutils.TlUtils;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.Components.poll.attached.PollAttachedMediaLink;
 import org.telegram.ui.Components.poll.attached.PollAttachedMediaLocation;

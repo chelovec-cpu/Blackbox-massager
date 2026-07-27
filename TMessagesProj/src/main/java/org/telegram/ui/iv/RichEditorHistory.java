@@ -1,7 +1,7 @@
 package org.telegram.ui.iv;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.FileLog;
 import org.telegram.tgnet.SerializedData;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_iv;

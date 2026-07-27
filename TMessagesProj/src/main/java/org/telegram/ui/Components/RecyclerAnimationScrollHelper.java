@@ -9,8 +9,8 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.MessagesController;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.MessagesController;
 import org.telegram.ui.Cells.ChatMessageCell;
 import org.telegram.ui.Cells.IMessageCell;
 

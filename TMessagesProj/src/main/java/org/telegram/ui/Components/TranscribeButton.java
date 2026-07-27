@@ -1,6 +1,6 @@
 package org.telegram.ui.Components;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -28,21 +28,21 @@ import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.TranslateController;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AccountInstance;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.MessagesStorage;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.TranslateController;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
@@ -118,7 +118,7 @@ public class TranscribeButton {
 
         this.isOpen = false;
         this.shouldBeOpen = false;
-        premium = parent.getMessageObject() != null && (UserConfig.getInstance(parent.getMessageObject().currentAccount).isPremium() || org.telegram.messenger.CloudflareSTT.isConfigured() || org.telegram.messenger.forkgram.ForkOfflineTranscribe.isActive());
+        premium = parent.getMessageObject() != null && (UserConfig.getInstance(parent.getMessageObject().currentAccount).isPremium() || com.blackbox.messenger.CloudflareSTT.isConfigured() || com.blackbox.messenger.forkgram.ForkOfflineTranscribe.isActive());
 
         loadingFloat = new AnimatedFloat(parent, 250, CubicBezierInterpolator.EASE_OUT_QUINT);
         animatedDrawLock = new AnimatedFloat(parent, 250, CubicBezierInterpolator.EASE_OUT_QUINT);
@@ -636,7 +636,7 @@ public class TranscribeButton {
 
     private static HashMap<Long, MessageObject> transcribeOperationsById;
     private static HashMap<Integer, MessageObject> transcribeOperationsByDialogPosition;
-    private static HashMap<Integer, org.telegram.messenger.forkgram.TranscriptionCancellable> offlineTranscribeOperations;
+    private static HashMap<Integer, com.blackbox.messenger.forkgram.TranscriptionCancellable> offlineTranscribeOperations;
     private static ArrayList<Integer> videoTranscriptionsOpen;
 
     public static void openVideoTranscription(MessageObject messageObject) {
@@ -680,7 +680,7 @@ public class TranscribeButton {
         long dialogId = DialogObject.getPeerDialogId(peer);
         int messageId = messageObject.messageOwner.id;
         if (open) {
-            boolean offlineRetry = TextUtils.isEmpty(messageObject.messageOwner.voiceTranscription) && org.telegram.messenger.forkgram.ForkOfflineTranscribe.isActive();
+            boolean offlineRetry = TextUtils.isEmpty(messageObject.messageOwner.voiceTranscription) && com.blackbox.messenger.forkgram.ForkOfflineTranscribe.isActive();
             if (messageObject.messageOwner.voiceTranscription != null && messageObject.messageOwner.voiceTranscriptionFinal && !offlineRetry) {
                 TranscribeButton.openVideoTranscription(messageObject);
                 messageObject.messageOwner.voiceTranscriptionOpen = true;
@@ -692,7 +692,7 @@ public class TranscribeButton {
                 if (BuildVars.LOGS_ENABLED) {
                     FileLog.d("sending Transcription request, msg_id=" + messageId + " dialog_id=" + dialogId);
                 }
-                if (org.telegram.messenger.forkgram.ForkOfflineTranscribe.isActive()) {
+                if (com.blackbox.messenger.forkgram.ForkOfflineTranscribe.isActive()) {
                     File path = null;
                     String attachPath = messageObject.messageOwner.attachPath;
                     if (!TextUtils.isEmpty(attachPath)) {
@@ -702,13 +702,13 @@ public class TranscribeButton {
                         }
                     }
                     if (path == null) {
-                        path = org.telegram.messenger.FileLoader.getInstance(account).getPathToMessage(messageObject.messageOwner);
+                        path = com.blackbox.messenger.FileLoader.getInstance(account).getPathToMessage(messageObject.messageOwner);
                         if (path != null && !path.exists()) {
                             path = null;
                         }
                     }
                     if (path == null) {
-                        path = org.telegram.messenger.FileLoader.getInstance(account).getPathToAttach(messageObject.getDocument(), true);
+                        path = com.blackbox.messenger.FileLoader.getInstance(account).getPathToAttach(messageObject.getDocument(), true);
                     }
                     if (path == null || !path.exists()) {
                         NotificationCenter.getInstance(account).postNotificationName(NotificationCenter.voiceTranscriptionUpdate, messageObject);
@@ -716,12 +716,12 @@ public class TranscribeButton {
                         NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.showBulletin, Bulletin.TYPE_ERROR, LocaleController.getString(R.string.PleaseDownload));
                         return;
                     }
-                    long id = org.telegram.messenger.Utilities.random.nextLong();
+                    long id = com.blackbox.messenger.Utilities.random.nextLong();
                     if (transcribeOperationsByDialogPosition == null) {
                         transcribeOperationsByDialogPosition = new HashMap<>();
                     }
                     transcribeOperationsByDialogPosition.put(reqInfoHash(messageObject), messageObject);
-                    org.telegram.messenger.forkgram.TranscriptionCancellable cancellable = org.telegram.messenger.forkgram.ForkOfflineTranscribe.requestTranscription(path.getAbsolutePath(), "", (partial) -> AndroidUtilities.runOnUIThread(() -> {
+                    com.blackbox.messenger.forkgram.TranscriptionCancellable cancellable = com.blackbox.messenger.forkgram.ForkOfflineTranscribe.requestTranscription(path.getAbsolutePath(), "", (partial) -> AndroidUtilities.runOnUIThread(() -> {
                         NotificationCenter.getInstance(account).postNotificationName(NotificationCenter.voiceTranscriptionUpdate, messageObject, (Long) id, (String) partial, (Boolean) true, (Boolean) false);
                     }), (text, exception) -> {
                         if (offlineTranscribeOperations != null) {
@@ -742,7 +742,7 @@ public class TranscribeButton {
                             MessagesStorage.getInstance(account).updateMessageVoiceTranscription(dialogId, messageId, text, messageObject.messageOwner);
                             AndroidUtilities.runOnUIThread(() -> finishTranscription(messageObject, id, text), Math.max(0, minDuration - duration));
                         } else {
-                            final boolean cancelled = exception instanceof org.telegram.messenger.forkgram.TranscriptionCancelledException;
+                            final boolean cancelled = exception instanceof com.blackbox.messenger.forkgram.TranscriptionCancelledException;
                             AndroidUtilities.runOnUIThread(() -> {
                                 if (transcribeOperationsByDialogPosition != null) {
                                     transcribeOperationsByDialogPosition.remove(reqInfoHash(messageObject));
@@ -763,7 +763,7 @@ public class TranscribeButton {
                     }
                     return;
                 }
-                if (org.telegram.messenger.CloudflareSTT.isConfigured()) {
+                if (com.blackbox.messenger.CloudflareSTT.isConfigured()) {
                     File path = null;
                     String attachPath = messageObject.messageOwner.attachPath;
                     if (!TextUtils.isEmpty(attachPath)) {
@@ -773,13 +773,13 @@ public class TranscribeButton {
                         }
                     }
                     if (path == null) {
-                        path = org.telegram.messenger.FileLoader.getInstance(account).getPathToMessage(messageObject.messageOwner);
+                        path = com.blackbox.messenger.FileLoader.getInstance(account).getPathToMessage(messageObject.messageOwner);
                         if (path != null && !path.exists()) {
                             path = null;
                         }
                     }
                     if (path == null) {
-                        path = org.telegram.messenger.FileLoader.getInstance(account).getPathToAttach(messageObject.getDocument(), true);
+                        path = com.blackbox.messenger.FileLoader.getInstance(account).getPathToAttach(messageObject.getDocument(), true);
                     }
                     if (path == null || !path.exists()) {
                         NotificationCenter.getInstance(account).postNotificationName(NotificationCenter.voiceTranscriptionUpdate, messageObject);
@@ -787,12 +787,12 @@ public class TranscribeButton {
                         NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.showBulletin, Bulletin.TYPE_ERROR, LocaleController.getString(R.string.PleaseDownload));
                         return;
                     }
-                    long id = org.telegram.messenger.Utilities.random.nextLong();
+                    long id = com.blackbox.messenger.Utilities.random.nextLong();
                     if (transcribeOperationsByDialogPosition == null) {
                         transcribeOperationsByDialogPosition = new HashMap<>();
                     }
                     transcribeOperationsByDialogPosition.put(reqInfoHash(messageObject), messageObject);
-                    org.telegram.messenger.CloudflareSTT.requestWorkersAi(path.getAbsolutePath(), messageObject.isRoundVideo(), (text, exception) -> {
+                    com.blackbox.messenger.CloudflareSTT.requestWorkersAi(path.getAbsolutePath(), messageObject.isRoundVideo(), (text, exception) -> {
                         if (text != null) {
                             if (transcribeOperationsById == null) {
                                 transcribeOperationsById = new HashMap<>();
@@ -814,7 +814,7 @@ public class TranscribeButton {
                                 }
                                 NotificationCenter.getInstance(account).postNotificationName(NotificationCenter.voiceTranscriptionUpdate, messageObject);
                                 NotificationCenter.getInstance(account).postNotificationName(NotificationCenter.updateTranscriptionLock);
-                                org.telegram.messenger.CloudflareSTT.showErrorDialog(exception);
+                                com.blackbox.messenger.CloudflareSTT.showErrorDialog(exception);
                             });
                         }
                     });
@@ -900,7 +900,7 @@ public class TranscribeButton {
                 transcribeOperationsByDialogPosition.remove((Integer) reqInfoHash(messageObject));
             }
             if (offlineTranscribeOperations != null) {
-                org.telegram.messenger.forkgram.TranscriptionCancellable pending = offlineTranscribeOperations.remove((Integer) reqInfoHash(messageObject));
+                com.blackbox.messenger.forkgram.TranscriptionCancellable pending = offlineTranscribeOperations.remove((Integer) reqInfoHash(messageObject));
                 if (pending != null) {
                     pending.cancel();
                 }
@@ -996,7 +996,7 @@ public class TranscribeButton {
         if (messageObject == null || messageObject.messageOwner == null) {
             return false;
         }
-        if (org.telegram.messenger.CloudflareSTT.isConfigured() || org.telegram.messenger.forkgram.ForkOfflineTranscribe.isActive()) {
+        if (com.blackbox.messenger.CloudflareSTT.isConfigured() || com.blackbox.messenger.forkgram.ForkOfflineTranscribe.isActive()) {
             return false;
         }
         if (isFreeTranscribeInChat(messageObject)) {

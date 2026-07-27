@@ -1,7 +1,7 @@
 package org.telegram.ui.Stars;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.LocaleController.getString;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
@@ -22,16 +22,16 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AppGlobalConfig;
-import org.telegram.messenger.BillingController;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageSuggestionParams;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.utils.tlutils.AmountUtils;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.AppGlobalConfig;
+import com.blackbox.messenger.BillingController;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageSuggestionParams;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.utils.tlutils.AmountUtils;
 import org.telegram.ui.AccountFrozenAlert;
 import org.telegram.ui.ActionBar.BottomSheet;
 import org.telegram.ui.ActionBar.Theme;

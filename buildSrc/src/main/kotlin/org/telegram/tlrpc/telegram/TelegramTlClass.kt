@@ -1,6 +1,6 @@
 package org.telegram.tlrpc.telegram
 
-data class TelegramTlClass(
+data class Blackbox MessengerTlClass(
     val constructor: UInt?,
 
     val packageName: String,

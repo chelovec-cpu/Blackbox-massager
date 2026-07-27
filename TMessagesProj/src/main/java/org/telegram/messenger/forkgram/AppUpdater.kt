@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
 import android.app.Activity
 import android.app.DownloadManager
@@ -11,12 +11,12 @@ import org.json.JSONObject
 import org.json.JSONArray
 
 import android.os.Build
-import org.telegram.messenger.AndroidUtilities
-import org.telegram.messenger.BuildVars
-import org.telegram.messenger.LocaleController
-import org.telegram.messenger.MessagesController
-import org.telegram.messenger.UserConfig
-import org.telegram.messenger.R;
+import com.blackbox.messenger.AndroidUtilities
+import com.blackbox.messenger.BuildVars
+import com.blackbox.messenger.LocaleController
+import com.blackbox.messenger.MessagesController
+import com.blackbox.messenger.UserConfig
+import com.blackbox.messenger.R;
 import org.telegram.tgnet.ConnectionsManager
 import org.telegram.tgnet.TLRPC
 import org.telegram.ui.ActionBar.AlertDialog
@@ -91,9 +91,9 @@ object AppUpdater {
             lastTimestampOfCheck = System.currentTimeMillis()
             val currentVersion = BuildVars.BUILD_VERSION_STRING
 
-            // Try Telegram channel first if we have an active session
+            // Try Blackbox Messenger channel first if we have an active session
             if (UserConfig.getInstance(UserConfig.selectedAccount).isClientActivated()) {
-                checkUpdateFromTelegramChannel(parentActivity, context, legacyCallback, modernCallback, manual, currentVersion)
+                checkUpdateFromBlackbox MessengerChannel(parentActivity, context, legacyCallback, modernCallback, manual, currentVersion)
             } else {
                 // Fallback to GitHub API
                 checkUpdateFromGitHub(parentActivity, context, legacyCallback, manual, currentVersion)
@@ -106,7 +106,7 @@ object AppUpdater {
         }
     }
 
-    private fun checkUpdateFromTelegramChannel(
+    private fun checkUpdateFromBlackbox MessengerChannel(
         parentActivity: Activity,
         context: Context,
         legacyCallback: (AlertDialog.Builder?) -> Int,
@@ -162,7 +162,7 @@ object AppUpdater {
                         return@sendRequest
                     }
 
-                    val isBeta = org.telegram.messenger.ApplicationLoader.getApplicationId().contains(".beta")
+                    val isBeta = com.blackbox.messenger.ApplicationLoader.getApplicationId().contains(".beta")
                     val releaseType = if (isBeta) "beta" else "release"
                     val releaseInfo = if (isBeta) {
                         androidInfo.optString("beta")
@@ -216,7 +216,7 @@ object AppUpdater {
                     getDownloadUrlFromFilesChannel(parentActivity, context, modernCallback, newVersion, filesChannelUsername, messageId)
 
                 } catch (e: Exception) {
-                    android.util.Log.e("Fork Client", "Error parsing update info from Telegram, falling back to GitHub", e)
+                    android.util.Log.e("Fork Client", "Error parsing update info from Blackbox Messenger, falling back to GitHub", e)
                     checkUpdateFromGitHub(parentActivity, context, legacyCallback, manual, currentVersion)
                 }
             }

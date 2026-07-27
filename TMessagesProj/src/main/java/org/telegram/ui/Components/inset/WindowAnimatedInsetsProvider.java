@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsAnimationCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import org.jspecify.annotations.Nullable;
-import org.telegram.messenger.AndroidUtilities;
+import com.blackbox.messenger.AndroidUtilities;
 import org.telegram.ui.Components.chat.ViewPositionWatcher;
 
 import java.util.List;

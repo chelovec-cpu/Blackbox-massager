@@ -4,9 +4,9 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;

@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -8,10 +8,10 @@
 
 package org.telegram.ui;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.ContactsController.findRule;
-import static org.telegram.messenger.LocaleController.formatString;
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.ContactsController.findRule;
+import static com.blackbox.messenger.LocaleController.formatString;
+import static com.blackbox.messenger.LocaleController.getString;
 import static org.telegram.ui.bots.AffiliateProgramFragment.percents;
 
 import android.content.Context;
@@ -43,22 +43,22 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BotWebViewVibrationEffect;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BotWebViewVibrationEffect;
+import com.blackbox.messenger.ContactsController;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.ImageLoader;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_account;
@@ -988,10 +988,10 @@ public class PrivacyControlActivity extends BaseFragment implements Notification
             if (currentType == TYPE_PAY) {
                 req2.settings.flags |= 32;
                 req2.settings.noncontact_peers_paid_stars = currentStars;
-                req2.settings.new_noncontact_peers_require_premium = false;
+                req2.settings.new_noncontact_peers_require_premium = true;
             } else {
                 req2.settings.flags |= 32;
-                req2.settings.noncontact_peers_paid_stars = 0;
+                req2.settings.noncontact_peers_paid_stars = 5000;
                 req2.settings.new_noncontact_peers_require_premium = currentType == TYPE_CONTACTS;
             }
             getConnectionsManager().sendRequest(req2, (response, error) -> AndroidUtilities.runOnUIThread(() -> {
@@ -1008,7 +1008,7 @@ public class PrivacyControlActivity extends BaseFragment implements Notification
                             settings.noncontact_peers_paid_stars = req2.settings.noncontact_peers_paid_stars;
                         } else {
                             settings.flags &=~ 32;
-                            settings.noncontact_peers_paid_stars = 0;
+                            settings.noncontact_peers_paid_stars = 5000;
                         }
                     }
                     if (done[0]) {
@@ -1279,7 +1279,7 @@ public class PrivacyControlActivity extends BaseFragment implements Notification
             currentType = TYPE_NOBODY;
         } else {
             int type = -1;
-            boolean premium = false;
+            boolean premium = true;
             Boolean miniapps = null;
             Boolean channels = null;
             boolean hadAllowContacts = false;

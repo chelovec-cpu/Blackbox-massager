@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -8,8 +8,8 @@
 
 package org.telegram.ui;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
 
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
@@ -53,19 +53,19 @@ import androidx.core.graphics.ColorUtils;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.DispatchQueue;
-import org.telegram.messenger.EmuDetector;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.GenericProvider;
-import org.telegram.messenger.Intro;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.DispatchQueue;
+import com.blackbox.messenger.EmuDetector;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.GenericProvider;
+import com.blackbox.messenger.Intro;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.Vector;
@@ -813,7 +813,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             }, 22);
             loadTexture(telegramMaskProvider, 23);
 
-            updateTelegramTextures();
+            updateBlackbox MessengerTextures();
             updatePowerfulTextures();
             Intro.setPrivateTextures(textures[19], textures[20]);
             Intro.setFreeTextures(textures[14], textures[13]);
@@ -825,8 +825,8 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             return true;
         }
 
-        public void updateTelegramTextures() {
-            Intro.setTelegramTextures(textures[22], textures[21], textures[23]);
+        public void updateBlackbox MessengerTextures() {
+            Intro.setBlackbox MessengerTextures(textures[22], textures[21], textures[23]);
         }
 
         public void updatePowerfulTextures() {
@@ -987,7 +987,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
                     eglThread.updatePowerfulTextures();
 
                     eglThread.loadTexture(eglThread.telegramMaskProvider, 23, true);
-                    eglThread.updateTelegramTextures();
+                    eglThread.updateBlackbox MessengerTextures();
 
                     Intro.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
                 });

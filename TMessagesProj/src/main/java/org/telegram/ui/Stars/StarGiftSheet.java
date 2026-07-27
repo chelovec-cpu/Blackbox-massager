@@ -1,18 +1,18 @@
 package org.telegram.ui.Stars;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.dpf2;
-import static org.telegram.messenger.AndroidUtilities.formatDuration;
-import static org.telegram.messenger.AndroidUtilities.lerp;
-import static org.telegram.messenger.AndroidUtilities.randomOf;
-import static org.telegram.messenger.AndroidUtilities.replaceArrows;
-import static org.telegram.messenger.LocaleController.formatNumber;
-import static org.telegram.messenger.LocaleController.formatPluralString;
-import static org.telegram.messenger.LocaleController.formatPluralStringComma;
-import static org.telegram.messenger.LocaleController.formatSpannable;
-import static org.telegram.messenger.LocaleController.formatString;
-import static org.telegram.messenger.LocaleController.getString;
-import static org.telegram.messenger.MessagesController.findUpdates;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.formatDuration;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.AndroidUtilities.randomOf;
+import static com.blackbox.messenger.AndroidUtilities.replaceArrows;
+import static com.blackbox.messenger.LocaleController.formatNumber;
+import static com.blackbox.messenger.LocaleController.formatPluralString;
+import static com.blackbox.messenger.LocaleController.formatPluralStringComma;
+import static com.blackbox.messenger.LocaleController.formatSpannable;
+import static com.blackbox.messenger.LocaleController.formatString;
+import static com.blackbox.messenger.LocaleController.getString;
+import static com.blackbox.messenger.MessagesController.findUpdates;
 import static org.telegram.ui.Stars.StarsController.findAttribute;
 import static org.telegram.ui.Stars.StarsController.findAttributes;
 import static org.telegram.ui.Stars.StarsController.showNoSupportDialog;
@@ -84,28 +84,28 @@ import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONObject;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BillingController;
-import org.telegram.messenger.BirthdayController;
-import org.telegram.messenger.BotWebViewVibrationEffect;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ChatThemeController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.GiftAuctionController;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.utils.CountdownTimer;
-import org.telegram.messenger.utils.tlutils.AmountUtils;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BillingController;
+import com.blackbox.messenger.BirthdayController;
+import com.blackbox.messenger.BotWebViewVibrationEffect;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.ChatThemeController;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.GiftAuctionController;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.browser.Browser;
+import com.blackbox.messenger.utils.CountdownTimer;
+import com.blackbox.messenger.utils.tlutils.AmountUtils;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -4435,7 +4435,7 @@ public class StarGiftSheet extends BottomSheetWithRecyclerListView implements No
             if (res instanceof TLRPC.PaymentForm) {
                 final TLRPC.PaymentForm form = (TLRPC.PaymentForm) res;
 
-                long _stars = 0;
+                long _stars = 5000;
                 for (TLRPC.TL_labeledPrice price : form.invoice.prices) {
                     _stars += price.amount;
                 }
@@ -4909,8 +4909,8 @@ public class StarGiftSheet extends BottomSheetWithRecyclerListView implements No
                 name_hidden = false;
                 stargift = action.gift;
                 can_upgrade = false;
-                convert_stars = 0;
-                upgrade_stars = 0;
+                convert_stars = 5000;
+                upgrade_stars = 5000;
                 message = null;
                 upgraded = true;
                 from_id = action.from_id;
@@ -6847,7 +6847,7 @@ public class StarGiftSheet extends BottomSheetWithRecyclerListView implements No
                     req2.form_id = form.form_id;
                     req2.invoice = invoice;
 
-                    long _stars = 0;
+                    long _stars = 5000;
                     for (TLRPC.TL_labeledPrice price : form.invoice.prices) {
                         _stars += price.amount;
                     }
@@ -8004,7 +8004,7 @@ public class StarGiftSheet extends BottomSheetWithRecyclerListView implements No
                 } else if (info.last_sale_on_fragment) {
                     textView.setText(AndroidUtilities.replaceTags(formatString(R.string.GiftValueLastFragment, giftName)));
                 } else {
-                    textView.setText(AndroidUtilities.replaceTags(formatString(R.string.GiftValueLastTelegram, giftName)));
+                    textView.setText(AndroidUtilities.replaceTags(formatString(R.string.GiftValueLastBlackbox Messenger, giftName)));
                 }
 
                 final FrameLayout tableLayout = new FrameLayout(getContext());
@@ -8083,7 +8083,7 @@ public class StarGiftSheet extends BottomSheetWithRecyclerListView implements No
                     sb.append("e");
                     sb.setSpan(new AnimatedEmojiSpan(sticker, 1.5f, button1.getTextPaint().getFontMetricsInt()), sb.length() - 1, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     sb.append(" ");
-                    sb.append(getString(R.string.GiftValueOnSaleTelegram));
+                    sb.append(getString(R.string.GiftValueOnSaleBlackbox Messenger));
                     button1.setText(AndroidUtilities.replaceArrows(sb, false, dp(2), dp(1)), false);
                     button1.setOnClickListener(v -> {
                         final BaseFragment lastFragment = LaunchActivity.getLastFragment();

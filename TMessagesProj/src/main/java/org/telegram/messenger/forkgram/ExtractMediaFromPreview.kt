@@ -1,7 +1,7 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
-import org.telegram.messenger.MessageObject
-import org.telegram.messenger.SendMessagesHelper
+import com.blackbox.messenger.MessageObject
+import com.blackbox.messenger.SendMessagesHelper
 import org.telegram.tgnet.TLRPC
 
 object ExtractMediaFromPreview {

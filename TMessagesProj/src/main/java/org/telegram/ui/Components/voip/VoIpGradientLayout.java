@@ -23,8 +23,8 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LiteMode;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.LiteMode;
 import org.telegram.ui.Components.MotionBackgroundDrawable;
 
 @SuppressLint("ViewConstructor")

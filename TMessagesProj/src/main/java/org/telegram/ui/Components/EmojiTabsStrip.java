@@ -29,15 +29,15 @@ import androidx.collection.LongSparseArray;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaDataController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.Premium.PremiumLockIconView;
@@ -132,7 +132,7 @@ public class EmojiTabsStrip extends ScrollableHorizontalScrollView {
     ) {
         super(context);
         final boolean disableLockedAnimatedEmoji = true
-            && org.telegram.messenger.MessagesController.getGlobalMainSettings().getBoolean("disableLockedAnimatedEmoji", false)
+            && com.blackbox.messenger.MessagesController.getGlobalMainSettings().getBoolean("disableLockedAnimatedEmoji", false)
             && !UserConfig.getInstance(UserConfig.selectedAccount).isPremium();
         this.includeAnimated = includeAnimated && !disableLockedAnimatedEmoji;
         this.resourcesProvider = resourcesProvider;

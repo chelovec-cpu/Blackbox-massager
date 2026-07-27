@@ -1,4 +1,4 @@
-package org.telegram.messenger.video;
+package com.blackbox.messenger.video;
 
 import android.annotation.TargetApi;
 import android.media.MediaCodec;
@@ -11,17 +11,17 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.VideoEditedInfo;
-import org.telegram.messenger.video.audio_input.AudioInput;
-import org.telegram.messenger.video.audio_input.BlankAudioInput;
-import org.telegram.messenger.video.audio_input.GeneralAudioInput;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.VideoEditedInfo;
+import com.blackbox.messenger.video.audio_input.AudioInput;
+import com.blackbox.messenger.video.audio_input.BlankAudioInput;
+import com.blackbox.messenger.video.audio_input.GeneralAudioInput;
 import org.telegram.ui.Stories.recorder.CollageLayout;
 import org.telegram.ui.Stories.recorder.StoryEntry;
 

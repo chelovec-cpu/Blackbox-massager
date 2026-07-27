@@ -99,7 +99,7 @@
     </queries>
 
     <application
-        android:name="org.telegram.messenger.ApplicationLoader"
+        android:name="com.blackbox.messenger.ApplicationLoader"
         android:allowBackup="true"
         android:restoreAnyVersion="true"
         android:backupAgent=".BackupAgent"
@@ -119,7 +119,7 @@
 
         <activity-alias
             android:enabled="true"
-            android:name="org.telegram.messenger.DefaultIcon"
+            android:name="com.blackbox.messenger.DefaultIcon"
             android:targetActivity="org.telegram.ui.LaunchActivity"
             android:icon="@mipmap/icon_01_launcher"
             android:roundIcon="@mipmap/icon_01_launcher_round"
@@ -134,7 +134,7 @@
 
         <activity-alias
             android:enabled="false"
-            android:name="org.telegram.messenger.OriginalIcon"
+            android:name="com.blackbox.messenger.OriginalIcon"
             android:targetActivity="org.telegram.ui.LaunchActivity"
             android:icon="@mipmap/ic_original_launcher"
             android:roundIcon="@mipmap/ic_original_launcher_round"
@@ -150,7 +150,7 @@
 
         <activity-alias
             android:enabled="false"
-            android:name="org.telegram.messenger.VintageIcon"
+            android:name="com.blackbox.messenger.VintageIcon"
             android:targetActivity="org.telegram.ui.LaunchActivity"
             android:icon="@mipmap/icon_6_launcher"
             android:roundIcon="@mipmap/icon_6_launcher_round"
@@ -166,7 +166,7 @@
 
         <activity-alias
             android:enabled="false"
-            android:name="org.telegram.messenger.AquaIcon"
+            android:name="com.blackbox.messenger.AquaIcon"
             android:targetActivity="org.telegram.ui.LaunchActivity"
             android:icon="@mipmap/icon_4_launcher"
             android:roundIcon="@mipmap/icon_4_launcher_round"
@@ -182,7 +182,7 @@
 
         <activity-alias
             android:enabled="false"
-            android:name="org.telegram.messenger.PremiumIcon"
+            android:name="com.blackbox.messenger.PremiumIcon"
             android:targetActivity="org.telegram.ui.LaunchActivity"
             android:icon="@mipmap/icon_3_launcher"
             android:roundIcon="@mipmap/icon_3_launcher_round"
@@ -198,7 +198,7 @@
 
         <activity-alias
             android:enabled="false"
-            android:name="org.telegram.messenger.TurboIcon"
+            android:name="com.blackbox.messenger.TurboIcon"
             android:targetActivity="org.telegram.ui.LaunchActivity"
             android:icon="@mipmap/icon_5_launcher"
             android:roundIcon="@mipmap/icon_5_launcher_round"
@@ -214,7 +214,7 @@
 
         <activity-alias
             android:enabled="false"
-            android:name="org.telegram.messenger.NoxIcon"
+            android:name="com.blackbox.messenger.NoxIcon"
             android:targetActivity="org.telegram.ui.LaunchActivity"
             android:icon="@mipmap/icon_2_launcher"
             android:roundIcon="@mipmap/icon_2_launcher_round"
@@ -230,7 +230,7 @@
 
         <activity-alias
             android:enabled="false"
-            android:name="org.telegram.messenger.AdaptiveIcon"
+            android:name="com.blackbox.messenger.AdaptiveIcon"
             android:targetActivity="org.telegram.ui.LaunchActivity"
             android:icon="@mipmap/icon_01_launcher_adaptive"
             android:roundIcon="@mipmap/icon_01_launcher_adaptive"
@@ -289,7 +289,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.org.telegram.messenger.android.profile"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.blackbox.messenger.android.profile"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -315,7 +315,7 @@
                 <data android:scheme="tg" />
             </intent-filter>
             <intent-filter>
-                <action android:name="org.telegram.messenger.CREATE_STICKER_PACK"/>
+                <action android:name="com.blackbox.messenger.CREATE_STICKER_PACK"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="*/*"/>
             </intent-filter>
@@ -330,8 +330,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.org.telegram.messenger.android.call"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.org.telegram.messenger.android.call.video"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.blackbox.messenger.android.call"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.blackbox.messenger.android.call.video"/>
             </intent-filter>
         </activity-alias>
         <activity
@@ -399,12 +399,12 @@
 <!--            </intent-filter>-->
 <!--        </activity>-->
         <activity
-            android:name="org.telegram.messenger.OpenChatReceiver"
+            android:name="com.blackbox.messenger.OpenChatReceiver"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
             android:exported="true">
         </activity>
         <activity
-            android:name="org.telegram.messenger.OpenAttachedMenuBotReceiver"
+            android:name="com.blackbox.messenger.OpenAttachedMenuBotReceiver"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
             android:exported="true">
         </activity>
@@ -433,7 +433,7 @@
             android:name=".AutoMessageHeardReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="org.telegram.messenger.ACTION_MESSAGE_HEARD"/>
+                <action android:name="com.blackbox.messenger.ACTION_MESSAGE_HEARD"/>
             </intent-filter>
         </receiver>
 
@@ -441,7 +441,7 @@
             android:name=".CopyCodeReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="org.telegram.messenger.ACTION_COPY_CODE"/>
+                <action android:name="com.blackbox.messenger.ACTION_COPY_CODE"/>
             </intent-filter>
         </receiver>
 
@@ -557,7 +557,7 @@
             </intent-filter>
         </service>
         <service
-            android:name=".voip.TelegramConnectionService"
+            android:name=".voip.Blackbox MessengerConnectionService"
             android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE"
             android:exported="true"
             android:foregroundServiceType="dataSync"
@@ -659,7 +659,7 @@
             </intent-filter>
         </receiver>
 
-        <service android:exported="false" android:name="org.telegram.messenger.UnifiedPushService">
+        <service android:exported="false" android:name="com.blackbox.messenger.UnifiedPushService">
             <intent-filter>
                 <action android:name="org.unifiedpush.android.connector.PUSH_EVENT"/>
             </intent-filter>
@@ -699,7 +699,7 @@
         <meta-data android:name="android.max_aspect" android:value="2.5" />
         <meta-data
             android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-            android:value="org.telegram.messenger.chromecast.ChromecastOptionsProvider" />
+            android:value="com.blackbox.messenger.chromecast.ChromecastOptionsProvider" />
 
     </application>
 

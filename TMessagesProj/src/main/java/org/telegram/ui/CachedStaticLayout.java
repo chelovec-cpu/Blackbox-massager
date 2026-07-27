@@ -12,7 +12,7 @@ import android.util.Log;
 
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.Emoji;
+import com.blackbox.messenger.Emoji;
 import org.telegram.ui.ActionBar.Theme;
 
 public class CachedStaticLayout {

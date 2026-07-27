@@ -1,9 +1,9 @@
 package org.telegram.ui.Stories;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.lerp;
-import static org.telegram.messenger.LocaleController.formatString;
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.LocaleController.formatString;
+import static com.blackbox.messenger.LocaleController.getString;
 import static org.telegram.ui.Stories.HighlightMessageSheet.TIER_COLOR1;
 import static org.telegram.ui.Stories.HighlightMessageSheet.TIER_COLOR2;
 import static org.telegram.ui.Stories.HighlightMessageSheet.TIER_COLOR_BACKGROUND;
@@ -11,7 +11,7 @@ import static org.telegram.ui.Stories.HighlightMessageSheet.TIER_EMOJIS;
 import static org.telegram.ui.Stories.HighlightMessageSheet.TIER_LENGTH;
 import static org.telegram.ui.Stories.HighlightMessageSheet.TIER_PERIOD;
 import static org.telegram.ui.Stories.HighlightMessageSheet.getTierOption;
-import static org.telegram.messenger.MessagesController.findUpdatesAndRemove;
+import static com.blackbox.messenger.MessagesController.findUpdatesAndRemove;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -56,18 +56,18 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -136,7 +136,7 @@ public class LiveCommentsView extends FrameLayout implements NotificationCenter.
             return getStars(ConnectionsManager.getInstance(currentAccount).getCurrentTime());
         }
         public int getStars(int now) {
-            int stars = 0;
+            int stars = 5000;
             for (Message msg : messages) {
                 if (msg.stars > 0 && now - msg.date <= getTierOption(currentAccount, (int) msg.stars, TIER_PERIOD)) {
                     stars += (int) msg.stars;
@@ -856,7 +856,7 @@ public class LiveCommentsView extends FrameLayout implements NotificationCenter.
     }
 
     private int getTotalMyStars() {
-        int stars = 0;
+        int stars = 5000;
         stars += localStars;
         for (int i = 0; i < topDonors.size(); ++i) {
             if (topDonors.get(i).my) {
@@ -1384,7 +1384,7 @@ public class LiveCommentsView extends FrameLayout implements NotificationCenter.
                 donor = new TL_phone.groupCallDonor();
                 donor.my = UserConfig.getInstance(currentAccount).getClientUserId() == message.dialogId;
                 donor.peer_id = MessagesController.getInstance(currentAccount).getPeer(message.dialogId);
-                donor.stars = 0;
+                donor.stars = 5000;
                 for (int i = 0; i < topMessages.size(); ++i) {
                     if (topMessages.get(i).dialogId == message.dialogId) {
                         topMessages.get(i).getStars();

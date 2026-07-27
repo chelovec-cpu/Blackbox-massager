@@ -1,4 +1,4 @@
-package org.telegram.messenger.voip;
+package com.blackbox.messenger.voip;
 
 import android.media.AudioFormat;
 import android.media.AudioManager;

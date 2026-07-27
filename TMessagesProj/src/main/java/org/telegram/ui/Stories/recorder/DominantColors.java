@@ -7,7 +7,7 @@ import androidx.core.graphics.ColorUtils;
 import androidx.palette.graphics.Palette;
 import androidx.palette.graphics.Target;
 
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.Utilities;
 
 public class DominantColors {
 

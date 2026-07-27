@@ -12,12 +12,12 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.HashtagSearchController;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.HashtagSearchController;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.Utilities;
 import org.telegram.ui.ActionBar.AlertDialog;
 import org.telegram.ui.ActionBar.Theme;
-import org.telegram.messenger.R;
+import com.blackbox.messenger.R;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,7 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.LocaleController.getString;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -8,7 +8,7 @@
 
 package org.telegram.ui;
 
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.LocaleController.getString;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -39,14 +39,14 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.DownloadController;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.ProxyRotationController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.DownloadController;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.ProxyRotationController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SharedConfig;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.ui.ActionBar.ActionBar;
 import org.telegram.ui.ActionBar.ActionBarMenu;
@@ -641,7 +641,7 @@ public class ProxyListActivity extends BaseFragment implements NotificationCente
 
     private void showWebSocketDomainDialog() {
         SharedPreferences preferences = MessagesController.getGlobalMainSettings();
-        org.telegram.messenger.forkgram.ForkDialogs.CreateFieldAlert(getParentActivity(), getString(R.string.WebSocketDomain), preferences.getString("webSocketDomain", ""), (result) -> {
+        com.blackbox.messenger.forkgram.ForkDialogs.CreateFieldAlert(getParentActivity(), getString(R.string.WebSocketDomain), preferences.getString("webSocketDomain", ""), (result) -> {
             result = result.trim();
             preferences.edit().putString("webSocketDomain", result).commit();
             updateRows(true);

@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.annotation.SuppressLint;
 import android.content.ClipDescription;
@@ -52,11 +52,11 @@ import androidx.collection.LongSparseArray;
 import androidx.core.view.inputmethod.InputContentInfoCompat;
 
 import org.json.JSONObject;
-import org.telegram.messenger.audioinfo.AudioInfo;
-import org.telegram.messenger.support.SparseLongArray;
-import org.telegram.messenger.utils.EphemeralMessagesHelper;
-import org.telegram.messenger.utils.tlutils.AmountUtils;
-import org.telegram.messenger.utils.tlutils.TlUtils;
+import com.blackbox.messenger.audioinfo.AudioInfo;
+import com.blackbox.messenger.support.SparseLongArray;
+import com.blackbox.messenger.utils.EphemeralMessagesHelper;
+import com.blackbox.messenger.utils.tlutils.AmountUtils;
+import com.blackbox.messenger.utils.tlutils.TlUtils;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.NativeByteBuffer;
 import org.telegram.tgnet.RequestDelegate;
@@ -11446,7 +11446,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                                 if (photo.has_stickers = (
                                     info.masks != null &&
                                     !info.masks.isEmpty() &&
-                                    org.telegram.messenger.MessagesController.getGlobalMainSettings().getBoolean("photoHasSticker", true)
+                                    com.blackbox.messenger.MessagesController.getGlobalMainSettings().getBoolean("photoHasSticker", true)
                                     )) {
                                     SerializedData serializedData = new SerializedData(4 + info.masks.size() * 20);
                                     serializedData.writeInt32(info.masks.size());

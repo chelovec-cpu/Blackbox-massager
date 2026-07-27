@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.annotation.SuppressLint;
 import android.app.PendingIntent;
@@ -27,7 +27,7 @@ import androidx.annotation.Nullable;
 import androidx.collection.LongSparseArray;
 
 import org.telegram.SQLite.SQLiteCursor;
-import org.telegram.messenger.audioinfo.AudioInfo;
+import com.blackbox.messenger.audioinfo.AudioInfo;
 import org.telegram.tgnet.NativeByteBuffer;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.LaunchActivity;
@@ -38,15 +38,15 @@ import java.util.List;
 import java.util.Locale;
 
 @SuppressLint("StaticFieldLeak")
-public class TelegramMediaSession {
+public class Blackbox MessengerMediaSession {
 
-    private static volatile TelegramMediaSession instance;
+    private static volatile Blackbox MessengerMediaSession instance;
 
-    public static TelegramMediaSession getInstance(Context context) {
+    public static Blackbox MessengerMediaSession getInstance(Context context) {
         if (instance == null) {
-            synchronized (TelegramMediaSession.class) {
+            synchronized (Blackbox MessengerMediaSession.class) {
                 if (instance == null) {
-                    instance = new TelegramMediaSession(context.getApplicationContext());
+                    instance = new Blackbox MessengerMediaSession(context.getApplicationContext());
                 }
             }
         }
@@ -54,11 +54,11 @@ public class TelegramMediaSession {
     }
 
     @Nullable
-    public static TelegramMediaSession peekInstance() {
+    public static Blackbox MessengerMediaSession peekInstance() {
         return instance;
     }
 
-    private static final String SESSION_TAG = "TelegramMediaSession";
+    private static final String SESSION_TAG = "Blackbox MessengerMediaSession";
     private static final String MEDIA_ID_ROOT = "__ROOT__";
     private static final String MEDIA_ID_CHAT_PREFIX = "__CHAT_";
 
@@ -89,7 +89,7 @@ public class TelegramMediaSession {
     private Paint roundPaint;
     private RectF bitmapRect;
 
-    private TelegramMediaSession(Context appContext) {
+    private Blackbox MessengerMediaSession(Context appContext) {
         this.appContext = appContext;
         this.currentAccount = UserConfig.selectedAccount;
         this.lastSelectedDialog = AndroidUtilities.getPrefIntOrLong(MessagesController.getNotificationsSettings(currentAccount), "auto_lastSelectedDialog", 0);

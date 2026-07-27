@@ -1,4 +1,4 @@
-package org.telegram.messenger.camera;
+package com.blackbox.messenger.camera;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -30,12 +30,12 @@ import android.view.WindowManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
 
 import java.io.File;
 import java.io.FileOutputStream;

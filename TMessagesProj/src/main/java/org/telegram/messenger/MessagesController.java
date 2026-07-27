@@ -1,19 +1,19 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.LocaleController.getString;
-import static org.telegram.messenger.NotificationsController.TYPE_CHANNEL;
-import static org.telegram.messenger.NotificationsController.TYPE_PRIVATE;
-import static org.telegram.messenger.NotificationsController.TYPE_REACTIONS_MESSAGES;
-import static org.telegram.messenger.Utilities.tryParseLong;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.LocaleController.getString;
+import static com.blackbox.messenger.NotificationsController.TYPE_CHANNEL;
+import static com.blackbox.messenger.NotificationsController.TYPE_PRIVATE;
+import static com.blackbox.messenger.NotificationsController.TYPE_REACTIONS_MESSAGES;
+import static com.blackbox.messenger.Utilities.tryParseLong;
 import static org.telegram.ui.Stars.StarsController.findAttribute;
 import static org.telegram.ui.Stories.HighlightMessageSheet.parseTiers;
 import static org.telegram.ui.Stories.HighlightMessageSheet.parseTiersString;
@@ -56,14 +56,14 @@ import org.telegram.SQLite.SQLiteCursor;
 import org.telegram.SQLite.SQLiteDatabase;
 import org.telegram.SQLite.SQLiteException;
 import org.telegram.SQLite.SQLitePreparedStatement;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.support.LongSparseIntArray;
-import org.telegram.messenger.support.LongSparseLongArray;
-import org.telegram.messenger.utils.EphemeralMessagesHelper;
-import org.telegram.messenger.voip.GroupCallMessagesController;
-import org.telegram.messenger.voip.VoIPDebugToSend;
-import org.telegram.messenger.voip.VoIPPreNotificationService;
-import org.telegram.messenger.voip.VoIPService;
+import com.blackbox.messenger.browser.Browser;
+import com.blackbox.messenger.support.LongSparseIntArray;
+import com.blackbox.messenger.support.LongSparseLongArray;
+import com.blackbox.messenger.utils.EphemeralMessagesHelper;
+import com.blackbox.messenger.voip.GroupCallMessagesController;
+import com.blackbox.messenger.voip.VoIPDebugToSend;
+import com.blackbox.messenger.voip.VoIPPreNotificationService;
+import com.blackbox.messenger.voip.VoIPService;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.NativeByteBuffer;
 import org.telegram.tgnet.RequestDelegate;
@@ -1807,7 +1807,7 @@ public class MessagesController extends BaseController implements NotificationCe
         channelRevenueWithdrawalEnabled = mainPreferences.getBoolean("channelRevenueWithdrawalEnabled", false);
         newNoncontactPeersRequirePremiumWithoutOwnpremium = mainPreferences.getBoolean("newNoncontactPeersRequirePremiumWithoutOwnpremium", false);
         reactionsUniqMax = mainPreferences.getInt("reactionsUniqMax", 11);
-        premiumManageSubscriptionUrl = mainPreferences.getString("premiumManageSubscriptionUrl", ApplicationLoader.isStandaloneBuild() ? "https://t.me/premiumbot?start=status" : "https://play.google.com/store/account/subscriptions?sku=telegram_premium&package=org.telegram.messenger");
+        premiumManageSubscriptionUrl = mainPreferences.getString("premiumManageSubscriptionUrl", ApplicationLoader.isStandaloneBuild() ? "https://t.me/premiumbot?start=status" : "https://play.google.com/store/account/subscriptions?sku=telegram_premium&package=com.blackbox.messenger");
         androidDisableRoundCamera2 = mainPreferences.getBoolean("androidDisableRoundCamera2", true);
         storiesPinnedToTopCountMax = mainPreferences.getInt("storiesPinnedToTopCountMax", 3);
         showAnnualPerMonth = mainPreferences.getBoolean("showAnnualPerMonth", false);
@@ -5872,7 +5872,7 @@ public class MessagesController extends BaseController implements NotificationCe
         TLRPC.TL_userForeign_old2 user = new TLRPC.TL_userForeign_old2();
         user.phone = "333";
         user.id = 333000;
-        user.first_name = "Telegram";
+        user.first_name = "Blackbox Messenger";
         user.last_name = "";
         user.status = null;
         user.photo = new TLRPC.TL_userProfilePhotoEmpty();
@@ -5882,7 +5882,7 @@ public class MessagesController extends BaseController implements NotificationCe
         user.phone = "42777";
         user.id = 777000;
         user.verified = true;
-        user.first_name = "Telegram";
+        user.first_name = "Blackbox Messenger";
         user.last_name = "Notifications";
         user.status = null;
         user.photo = new TLRPC.TL_userProfilePhotoEmpty();

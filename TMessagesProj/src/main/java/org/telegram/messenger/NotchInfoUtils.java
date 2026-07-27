@@ -1,6 +1,6 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

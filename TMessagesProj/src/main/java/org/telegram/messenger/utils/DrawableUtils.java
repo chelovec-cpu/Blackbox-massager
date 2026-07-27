@@ -1,8 +1,8 @@
-package org.telegram.messenger.utils;
+package com.blackbox.messenger.utils;
 
-import static org.telegram.messenger.AndroidUtilities.cascade;
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.cascade;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
 
 import android.graphics.Canvas;
 import android.graphics.RectF;
@@ -10,7 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 import android.graphics.Rect;
 
-import org.telegram.messenger.ImageReceiver;
+import com.blackbox.messenger.ImageReceiver;
 
 public class DrawableUtils {
     private static final Rect tmpRect = new Rect();

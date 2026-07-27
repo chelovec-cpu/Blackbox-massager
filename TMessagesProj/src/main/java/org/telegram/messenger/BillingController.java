@@ -1,7 +1,7 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.MessagesController.findUpdates;
-import static org.telegram.messenger.MessagesController.findUpdatesAndRemove;
+import static com.blackbox.messenger.MessagesController.findUpdates;
+import static com.blackbox.messenger.MessagesController.findUpdatesAndRemove;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -19,7 +19,7 @@ import androidx.core.util.Pair;
 import com.google.android.exoplayer2.util.Util;
 
 import org.checkerframework.checker.units.qual.A;
-import org.telegram.messenger.utils.BillingUtilities;
+import com.blackbox.messenger.utils.BillingUtilities;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.AlertDialog;

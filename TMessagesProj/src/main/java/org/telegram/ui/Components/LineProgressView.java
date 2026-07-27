@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 2.0.x.
+ * This is the source code of Blackbox Messenger for Android v. 2.0.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -16,7 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import org.telegram.messenger.AndroidUtilities;
+import com.blackbox.messenger.AndroidUtilities;
 import org.telegram.ui.Components.voip.CellFlickerDrawable;
 
 public class LineProgressView extends View {

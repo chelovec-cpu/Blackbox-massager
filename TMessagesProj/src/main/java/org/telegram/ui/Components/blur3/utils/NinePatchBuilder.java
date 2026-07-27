@@ -13,7 +13,7 @@ import java.nio.ByteOrder;
 
 import androidx.core.math.MathUtils;
 
-import org.telegram.messenger.ApplicationLoader;
+import com.blackbox.messenger.ApplicationLoader;
 
 public class NinePatchBuilder {
     public static final int TRANSPARENT_COLOR = 0x00000000;

@@ -1,7 +1,7 @@
 package org.telegram.ui.Stories;
 
-import static org.telegram.messenger.SharedConfig.PERFORMANCE_CLASS_HIGH;
-import static org.telegram.messenger.SharedConfig.getDevicePerformanceClass;
+import static com.blackbox.messenger.SharedConfig.PERFORMANCE_CLASS_HIGH;
+import static com.blackbox.messenger.SharedConfig.getDevicePerformanceClass;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.ImageReceiver;
+import com.blackbox.messenger.ImageReceiver;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.UiThread;

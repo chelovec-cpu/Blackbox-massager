@@ -1,6 +1,6 @@
-package org.telegram.messenger.pip.activity;
+package com.blackbox.messenger.pip.activity;
 
-import org.telegram.messenger.pip.PipActivityController;
+import com.blackbox.messenger.pip.PipActivityController;
 
 public interface IPipActivity {
     PipActivityController getPipController();

@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.text.TextUtils;
 import android.util.LruCache;

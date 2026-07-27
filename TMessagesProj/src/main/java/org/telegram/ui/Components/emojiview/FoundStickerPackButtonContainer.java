@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.emojiview;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.core.view.WindowInsetsCompat;
 
-import org.telegram.messenger.utils.GradientProtectionDrawable;
+import com.blackbox.messenger.utils.GradientProtectionDrawable;
 import org.telegram.ui.ActionBar.Theme;
 
 @SuppressLint("ViewConstructor")

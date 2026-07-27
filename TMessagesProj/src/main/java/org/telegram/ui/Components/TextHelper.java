@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.TypedValue;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
+import com.blackbox.messenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.Theme;
 
 public class TextHelper {

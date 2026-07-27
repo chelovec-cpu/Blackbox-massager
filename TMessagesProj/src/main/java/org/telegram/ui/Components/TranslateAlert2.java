@@ -1,8 +1,8 @@
 package org.telegram.ui.Components;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.dpf2;
-import static org.telegram.messenger.TranslateController.normalizeLanguage;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.TranslateController.normalizeLanguage;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -51,21 +51,21 @@ import com.google.common.base.Charsets;
 
 import org.json.JSONArray;
 import org.json.JSONTokener;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.LanguageDetector;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.RichMessageLayout;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.TranslateController;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.XiaomiUtilities;
-import org.telegram.messenger.forkgram.ForkOfflineTranslate;
-import org.telegram.messenger.forkgram.ForkTranslate;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.LanguageDetector;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.RichMessageLayout;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.TranslateController;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.XiaomiUtilities;
+import com.blackbox.messenger.forkgram.ForkOfflineTranslate;
+import com.blackbox.messenger.forkgram.ForkTranslate;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_iv;

@@ -19,26 +19,26 @@ import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BaseController;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.CaptchaController;
-import org.telegram.messenger.EmuDetector;
-import org.telegram.messenger.FileLoadOperation;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.FileUploadOperation;
-import org.telegram.messenger.KeepAliveJob;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.PushListenerController;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.StatsController;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AccountInstance;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BaseController;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.CaptchaController;
+import com.blackbox.messenger.EmuDetector;
+import com.blackbox.messenger.FileLoadOperation;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.FileUploadOperation;
+import com.blackbox.messenger.KeepAliveJob;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.PushListenerController;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.StatsController;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
 import org.telegram.ui.Components.VideoPlayer;
 import org.telegram.ui.LoginActivity;
 
@@ -870,7 +870,7 @@ public class ConnectionsManager extends BaseController {
         Utilities.globalQueue.postRunnable(() -> {
             boolean networkOnline = ApplicationLoader.isNetworkOnline();
             Utilities.stageQueue.postRunnable(() -> {
-                if (org.telegram.messenger.BuildConfig.SKIP_DNS_RESOLVER) {
+                if (com.blackbox.messenger.BuildConfig.SKIP_DNS_RESOLVER) {
                     return;
                 }
                 FileLog.d("13. currentTask == " + currentTask);

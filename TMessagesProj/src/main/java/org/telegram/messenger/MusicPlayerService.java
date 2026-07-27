@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -39,7 +39,7 @@ import androidx.core.app.NotificationCompat;
 
 import com.google.android.exoplayer2.C;
 
-import org.telegram.messenger.audioinfo.AudioInfo;
+import com.blackbox.messenger.audioinfo.AudioInfo;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
@@ -68,7 +68,7 @@ public class MusicPlayerService extends Service implements NotificationCenter.No
     private static boolean supportBigNotifications = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
     private static boolean supportLockScreenControls = Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP || !TextUtils.isEmpty(AndroidUtilities.getSystemProperty("ro.miui.ui.version.code"));
 
-    private TelegramMediaSession sessionHolder;
+    private Blackbox MessengerMediaSession sessionHolder;
     private MediaSessionCompat mediaSession;
     private PlaybackStateCompat.Builder playbackState;
     private Bitmap albumArtPlaceholder;
@@ -113,7 +113,7 @@ public class MusicPlayerService extends Service implements NotificationCenter.No
         });
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            sessionHolder = TelegramMediaSession.getInstance(getApplicationContext());
+            sessionHolder = Blackbox MessengerMediaSession.getInstance(getApplicationContext());
             mediaSession = sessionHolder.getSession();
             playbackState = new PlaybackStateCompat.Builder();
             albumArtPlaceholder = Bitmap.createBitmap(AndroidUtilities.dp(102), AndroidUtilities.dp(102), Bitmap.Config.ARGB_8888);
@@ -714,7 +714,7 @@ public class MusicPlayerService extends Service implements NotificationCenter.No
             metadataEditor.apply();
             audioManager.unregisterRemoteControlClient(remoteControlClient);
         }
-        // mediaSession is owned by TelegramMediaSession (process singleton) — do NOT release here.
+        // mediaSession is owned by Blackbox MessengerMediaSession (process singleton) — do NOT release here.
         for (int a = 0; a < UserConfig.MAX_ACCOUNT_COUNT; a++) {
             NotificationCenter.getInstance(a).removeObserver(this, NotificationCenter.messagePlayingDidSeek);
             NotificationCenter.getInstance(a).removeObserver(this, NotificationCenter.messagePlayingPlayStateChanged);

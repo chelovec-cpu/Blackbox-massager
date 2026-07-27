@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Grishka, 2013-2016.
  */
 
-package org.telegram.messenger.voip;
+package com.blackbox.messenger.voip;
 
 import android.content.SharedPreferences;
 import android.media.audiofx.AcousticEchoCanceler;
@@ -14,9 +14,9 @@ import android.media.audiofx.NoiseSuppressor;
 import android.os.Build;
 import android.os.SystemClock;
 
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.MessagesController;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.MessagesController;
 import org.telegram.ui.Components.voip.VoIPHelper;
 
 import java.io.File;

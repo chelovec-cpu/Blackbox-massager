@@ -1,7 +1,7 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
-import org.telegram.messenger.AccountInstance
-import org.telegram.messenger.MessageObject
+import com.blackbox.messenger.AccountInstance
+import com.blackbox.messenger.MessageObject
 import org.telegram.tgnet.TLObject
 import org.telegram.tgnet.TLRPC
 import kotlin.math.min

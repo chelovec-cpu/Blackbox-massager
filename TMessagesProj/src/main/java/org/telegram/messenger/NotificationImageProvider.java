@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

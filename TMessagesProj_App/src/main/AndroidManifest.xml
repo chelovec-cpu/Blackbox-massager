@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto">
     <application
-        android:name="org.telegram.messenger.ApplicationLoaderImpl"
+        android:name="com.blackbox.messenger.ApplicationLoaderImpl"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/AppName"

@@ -12,9 +12,9 @@ import android.graphics.Shader;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
-import org.telegram.messenger.R;
-import org.telegram.messenger.SvgHelper;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SvgHelper;
+import com.blackbox.messenger.Utilities;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.io.BufferedReader;

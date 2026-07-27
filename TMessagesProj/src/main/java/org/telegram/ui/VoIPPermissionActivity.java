@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.voip.VoIPPreNotificationService;
-import org.telegram.messenger.voip.VoIPService;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.voip.VoIPPreNotificationService;
+import com.blackbox.messenger.voip.VoIPService;
 import org.telegram.ui.Components.voip.VoIPHelper;
 
 import java.util.ArrayList;

@@ -1,8 +1,8 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.NotificationsController.TYPE_PRIVATE;
-import static org.telegram.messenger.NotificationsController.TYPE_REACTIONS_MESSAGES;
-import static org.telegram.messenger.NotificationsController.TYPE_REACTIONS_STORIES;
+import static com.blackbox.messenger.NotificationsController.TYPE_PRIVATE;
+import static com.blackbox.messenger.NotificationsController.TYPE_REACTIONS_MESSAGES;
+import static com.blackbox.messenger.NotificationsController.TYPE_REACTIONS_STORIES;
 
 import android.content.SharedPreferences;
 

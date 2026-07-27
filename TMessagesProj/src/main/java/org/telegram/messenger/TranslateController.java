@@ -1,6 +1,6 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.LocaleController.getString;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -34,7 +34,7 @@ import org.telegram.tgnet.tl.TL_stories;
 import org.telegram.ui.ActionBar.BaseFragment;
 import org.telegram.ui.Components.Bulletin;
 import org.telegram.ui.Components.BulletinFactory;
-import org.telegram.messenger.forkgram.ForkOfflineTranslate;
+import com.blackbox.messenger.forkgram.ForkOfflineTranslate;
 import org.telegram.ui.Components.TranslateAlert2;
 import org.telegram.ui.LaunchActivity;
 import org.telegram.ui.PremiumPreviewFragment;

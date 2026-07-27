@@ -1,13 +1,13 @@
-package org.telegram.messenger.voip;
+package com.blackbox.messenger.voip;
 
 import static android.content.Context.AUDIO_SERVICE;
 
 import android.media.AudioManager;
 
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.Utilities;
 
 public class VoipAudioManager {
 

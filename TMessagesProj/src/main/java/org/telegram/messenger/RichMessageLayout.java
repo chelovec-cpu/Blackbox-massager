@@ -1,6 +1,6 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 import static org.telegram.tgnet.TLObject.hasFlag;
 import static org.telegram.tgnet.TLObject.setFlag;
 
@@ -6132,8 +6132,8 @@ public class RichMessageLayout {
                 mediaBgPaint.setColor(0x0f000000);
             }
             if (slideDotDrawable == null && view != null) {
-                slideDotDrawable = view.getResources().getDrawable(org.telegram.messenger.R.drawable.slide_dot_small);
-                slideDotBigDrawable = view.getResources().getDrawable(org.telegram.messenger.R.drawable.slide_dot_big);
+                slideDotDrawable = view.getResources().getDrawable(com.blackbox.messenger.R.drawable.slide_dot_small);
+                slideDotBigDrawable = view.getResources().getDrawable(com.blackbox.messenger.R.drawable.slide_dot_big);
             }
             final boolean inQuote = isInQuote();
             final int pad = dp(2);

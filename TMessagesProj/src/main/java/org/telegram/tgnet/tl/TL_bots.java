@@ -2,7 +2,7 @@ package org.telegram.tgnet.tl;
 
 import android.graphics.Path;
 
-import org.telegram.messenger.SvgHelper;
+import com.blackbox.messenger.SvgHelper;
 import org.telegram.tgnet.InputSerializedData;
 import org.telegram.tgnet.OutputSerializedData;
 import org.telegram.tgnet.TLMethod;

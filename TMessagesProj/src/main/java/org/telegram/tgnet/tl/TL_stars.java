@@ -2,9 +2,9 @@ package org.telegram.tgnet.tl;
 
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.utils.tlutils.AmountUtils;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.utils.tlutils.AmountUtils;
 import org.telegram.tgnet.InputSerializedData;
 import org.telegram.tgnet.OutputSerializedData;
 import org.telegram.tgnet.TLMethod;

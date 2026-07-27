@@ -1,13 +1,13 @@
 package org.telegram.ui.Components.poll.attached;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.graphics.Canvas;
 
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.SendMessagesHelper;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.SendMessagesHelper;
 import org.telegram.ui.Components.poll.PollAttachedMedia;
 
 public class PollAttachedMediaGallery extends PollAttachedMedia {

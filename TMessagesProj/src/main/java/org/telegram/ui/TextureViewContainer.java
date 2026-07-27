@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 
-import org.telegram.messenger.ImageReceiver;
+import com.blackbox.messenger.ImageReceiver;
 
 public class TextureViewContainer extends FrameLayout {
 

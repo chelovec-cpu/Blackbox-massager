@@ -1,8 +1,8 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.SharedConfig.SAVE_TO_GALLERY_FLAG_CHANNELS;
-import static org.telegram.messenger.SharedConfig.SAVE_TO_GALLERY_FLAG_GROUP;
-import static org.telegram.messenger.SharedConfig.SAVE_TO_GALLERY_FLAG_PEER;
+import static com.blackbox.messenger.SharedConfig.SAVE_TO_GALLERY_FLAG_CHANNELS;
+import static com.blackbox.messenger.SharedConfig.SAVE_TO_GALLERY_FLAG_GROUP;
+import static com.blackbox.messenger.SharedConfig.SAVE_TO_GALLERY_FLAG_PEER;
 
 import android.app.Activity;
 import android.content.SharedPreferences;

@@ -1,7 +1,7 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
 import android.widget.Toast
-import org.telegram.messenger.*
+import com.blackbox.messenger.*
 import org.telegram.tgnet.TLObject
 import org.telegram.tgnet.TLRPC
 import org.telegram.tgnet.TLRPC.*

@@ -32,19 +32,19 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.NotificationsController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.ringtone.RingtoneDataStore;
-import org.telegram.messenger.ringtone.RingtoneUploader;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.ContactsController;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.NotificationsController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.ringtone.RingtoneDataStore;
+import com.blackbox.messenger.ringtone.RingtoneUploader;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_account;
 import org.telegram.ui.ActionBar.ActionBar;
@@ -683,7 +683,7 @@ public class NotificationsSoundActivity extends BaseFragment implements ChatAtta
                 case 1:
                     HeaderCell headerCell = (HeaderCell) holder.itemView;
                     if (position == serverTonesHeaderRow) {
-                        headerCell.setText(LocaleController.getString(R.string.TelegramTones));
+                        headerCell.setText(LocaleController.getString(R.string.Blackbox MessengerTones));
                     } else if (position == systemTonesHeaderRow) {
                         headerCell.setText(LocaleController.getString(R.string.SystemTones));
                     }

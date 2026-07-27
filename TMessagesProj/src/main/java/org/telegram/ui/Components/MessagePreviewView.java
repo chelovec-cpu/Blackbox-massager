@@ -1,7 +1,7 @@
 package org.telegram.ui.Components;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.replaceSingleTag;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.replaceSingleTag;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -41,20 +41,20 @@ import androidx.recyclerview.widget.GridLayoutManagerFixed;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.ChatMessageSharedResources;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.MessagePreviewParams;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.ChatMessageSharedResources;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.ContactsController;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.MessagePreviewParams;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.ActionBarMenuSubItem;
 import org.telegram.ui.ActionBar.ActionBarPopupWindow;
@@ -1059,7 +1059,7 @@ public class MessagePreviewView extends FrameLayout {
                 sendersNameButton.setOnClickListener(view -> {
                     if (!canHideSenderName) {
                         BulletinFactory.of(MessagePreviewView.this, resourcesProvider)
-                            .createSimpleBulletin(R.raw.star_premium_2, replaceSingleTag("Subscribe to **Telegram Premium** to forward formatted messages without the sender’s name.", () -> {
+                            .createSimpleBulletin(R.raw.star_premium_2, replaceSingleTag("Subscribe to **Blackbox Messenger Premium** to forward formatted messages without the sender’s name.", () -> {
                                 dismiss(false);
                                 AndroidUtilities.runOnUIThread(() -> {
                                     if (!AndroidUtilities.isContextSafe(context)) return;

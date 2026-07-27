@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 1.3.x.
+ * This is the source code of Blackbox Messenger for Android v. 1.3.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.Manifest;
 import android.accounts.Account;
@@ -32,7 +32,7 @@ import androidx.annotation.NonNull;
 import androidx.collection.LongSparseArray;
 
 import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.forkgram.HiddenAccountHelper;
+import com.blackbox.messenger.forkgram.HiddenAccountHelper;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -392,7 +392,7 @@ public class ContactsController extends BaseController {
         Utilities.globalQueue.postRunnable(() -> {
             AccountManager am = AccountManager.get(ApplicationLoader.applicationContext);
             try {
-                Account[] accounts = am.getAccountsByType("org.telegram.messenger");
+                Account[] accounts = am.getAccountsByType("com.blackbox.messenger");
                 for (int a = 0; a < accounts.length; a++) {
                     Account acc = accounts[a];
                     boolean found = false;
@@ -424,7 +424,7 @@ public class ContactsController extends BaseController {
                 readContacts();
                 if (systemAccount == null) {
                     try {
-                        systemAccount = new Account("" + getUserConfig().getClientUserId(), "org.telegram.messenger");
+                        systemAccount = new Account("" + getUserConfig().getClientUserId(), "com.blackbox.messenger");
                         am.addAccountExplicitly(systemAccount, "", null);
                     } catch (Exception ignore) {
 
@@ -438,7 +438,7 @@ public class ContactsController extends BaseController {
         try {
             systemAccount = null;
             AccountManager am = AccountManager.get(ApplicationLoader.applicationContext);
-            Account[] accounts = am.getAccountsByType("org.telegram.messenger");
+            Account[] accounts = am.getAccountsByType("com.blackbox.messenger");
             for (int a = 0; a < accounts.length; a++) {
                 Account acc = accounts[a];
                 boolean found = false;
@@ -514,7 +514,7 @@ public class ContactsController extends BaseController {
                 AndroidUtilities.runOnUIThread(() -> {
                     AccountManager am = AccountManager.get(ApplicationLoader.applicationContext);
                     try {
-                        Account[] accounts = am.getAccountsByType("org.telegram.messenger");
+                        Account[] accounts = am.getAccountsByType("com.blackbox.messenger");
                         systemAccount = null;
                         for (int a = 0; a < accounts.length; a++) {
                             Account acc = accounts[a];
@@ -533,7 +533,7 @@ public class ContactsController extends BaseController {
                     }
                     if (HiddenAccountHelper.isVisibleActivatedAccount(currentAccount)) {
                         try {
-                            systemAccount = new Account("" + getUserConfig().getClientUserId(), "org.telegram.messenger");
+                            systemAccount = new Account("" + getUserConfig().getClientUserId(), "com.blackbox.messenger");
                             am.addAccountExplicitly(systemAccount, "", null);
                         } catch (Exception ignore) {
 
@@ -1338,7 +1338,7 @@ public class ContactsController extends BaseController {
                             }
                             getMessagesStorage().putCachedPhoneBook(contactsMap, false, false);
                             AndroidUtilities.runOnUIThread(() -> {
-                                mergePhonebookAndTelegramContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal, phoneBookByShortPhonesFinal);
+                                mergePhonebookAndBlackbox MessengerContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal, phoneBookByShortPhonesFinal);
                                 updateUnregisteredContacts();
                                 getNotificationCenter().postNotificationName(NotificationCenter.contactsDidLoad);
                                 getNotificationCenter().postNotificationName(NotificationCenter.contactsImported);
@@ -1426,7 +1426,7 @@ public class ContactsController extends BaseController {
                                         delayedContactsUpdate.clear();
                                     }
                                     AndroidUtilities.runOnUIThread(() -> {
-                                        mergePhonebookAndTelegramContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal, phoneBookByShortPhonesFinal);
+                                        mergePhonebookAndBlackbox MessengerContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal, phoneBookByShortPhonesFinal);
                                         getNotificationCenter().postNotificationName(NotificationCenter.contactsImported);
                                     });
                                     if (hasErrors[0]) {
@@ -1450,7 +1450,7 @@ public class ContactsController extends BaseController {
                             delayedContactsUpdate.clear();
                         }
                         AndroidUtilities.runOnUIThread(() -> {
-                            mergePhonebookAndTelegramContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal, phoneBookByShortPhonesFinal);
+                            mergePhonebookAndBlackbox MessengerContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal, phoneBookByShortPhonesFinal);
                             updateUnregisteredContacts();
                             getNotificationCenter().postNotificationName(NotificationCenter.contactsDidLoad);
                             getNotificationCenter().postNotificationName(NotificationCenter.contactsImported);
@@ -1470,7 +1470,7 @@ public class ContactsController extends BaseController {
                         applyContactsUpdates(delayedContactsUpdate, null, null, null);
                         delayedContactsUpdate.clear();
                     }
-                    AndroidUtilities.runOnUIThread(() -> mergePhonebookAndTelegramContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal, phoneBookByShortPhonesFinal));
+                    AndroidUtilities.runOnUIThread(() -> mergePhonebookAndBlackbox MessengerContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal, phoneBookByShortPhonesFinal));
                 });
                 if (!contactsMap.isEmpty()) {
                     getMessagesStorage().putCachedPhoneBook(contactsMap, false, false);
@@ -1795,11 +1795,11 @@ public class ContactsController extends BaseController {
         }
     }
 
-    private void mergePhonebookAndTelegramContacts(final HashMap<String, ArrayList<Object>> phoneBookSectionsDictFinal, final ArrayList<String> phoneBookSectionsArrayFinal, final HashMap<String, Contact> phoneBookByShortPhonesFinal) {
-        mergePhonebookAndTelegramContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal,phoneBookByShortPhonesFinal, true);
+    private void mergePhonebookAndBlackbox MessengerContacts(final HashMap<String, ArrayList<Object>> phoneBookSectionsDictFinal, final ArrayList<String> phoneBookSectionsArrayFinal, final HashMap<String, Contact> phoneBookByShortPhonesFinal) {
+        mergePhonebookAndBlackbox MessengerContacts(phoneBookSectionsDictFinal, phoneBookSectionsArrayFinal,phoneBookByShortPhonesFinal, true);
     }
 
-    private void mergePhonebookAndTelegramContacts(final HashMap<String, ArrayList<Object>> phoneBookSectionsDictFinal, final ArrayList<String> phoneBookSectionsArrayFinal, final HashMap<String, Contact> phoneBookByShortPhonesFinal, boolean needUpdateLists) {
+    private void mergePhonebookAndBlackbox MessengerContacts(final HashMap<String, ArrayList<Object>> phoneBookSectionsDictFinal, final ArrayList<String> phoneBookSectionsArrayFinal, final HashMap<String, Contact> phoneBookByShortPhonesFinal, boolean needUpdateLists) {
         final ArrayList<TLRPC.TL_contact> contactsCopy = new ArrayList<>(contacts);
         Utilities.globalQueue.postRunnable(() -> {
             if(needUpdateLists) {
@@ -2301,27 +2301,27 @@ public class ContactsController extends BaseController {
 
         builder = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
         builder.withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, rawContactId);
-        builder.withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.org.telegram.messenger.android.profile");
+        builder.withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.com.blackbox.messenger.android.profile");
         builder.withValue(ContactsContract.Data.DATA1, user.id);
-        builder.withValue(ContactsContract.Data.DATA2, "Telegram Profile");
+        builder.withValue(ContactsContract.Data.DATA2, "Blackbox Messenger Profile");
         builder.withValue(ContactsContract.Data.DATA3, LocaleController.formatString("ContactShortcutMessage", R.string.ContactShortcutMessage, phoneOrName));
         builder.withValue(ContactsContract.Data.DATA4, user.id);
         query.add(builder.build());
 
         builder = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
         builder.withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, rawContactId);
-        builder.withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.org.telegram.messenger.android.call");
+        builder.withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.com.blackbox.messenger.android.call");
         builder.withValue(ContactsContract.Data.DATA1, user.id);
-        builder.withValue(ContactsContract.Data.DATA2, "Telegram Voice Call");
+        builder.withValue(ContactsContract.Data.DATA2, "Blackbox Messenger Voice Call");
         builder.withValue(ContactsContract.Data.DATA3, LocaleController.formatString("ContactShortcutVoiceCall", R.string.ContactShortcutVoiceCall, phoneOrName));
         builder.withValue(ContactsContract.Data.DATA4, user.id);
         query.add(builder.build());
 
         builder = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
         builder.withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, rawContactId);
-        builder.withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.org.telegram.messenger.android.call.video");
+        builder.withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.com.blackbox.messenger.android.call.video");
         builder.withValue(ContactsContract.Data.DATA1, user.id);
-        builder.withValue(ContactsContract.Data.DATA2, "Telegram Video Call");
+        builder.withValue(ContactsContract.Data.DATA2, "Blackbox Messenger Video Call");
         builder.withValue(ContactsContract.Data.DATA3, LocaleController.formatString("ContactShortcutVideoCall", R.string.ContactShortcutVideoCall, phoneOrName));
         builder.withValue(ContactsContract.Data.DATA4, user.id);
         query.add(builder.build());
@@ -2473,7 +2473,7 @@ public class ContactsController extends BaseController {
                 }
                 buildContactsSectionsArrays(true);
                 if (needResort) {
-                    mergePhonebookAndTelegramContacts(phoneBookSectionsDict, phoneBookSectionsArray, phoneBookByShortPhones, false);
+                    mergePhonebookAndBlackbox MessengerContacts(phoneBookSectionsDict, phoneBookSectionsArray, phoneBookByShortPhones, false);
                 }
                 getNotificationCenter().postNotificationName(NotificationCenter.contactsDidLoad);
             });
@@ -2910,7 +2910,7 @@ public class ContactsController extends BaseController {
             // 1. Check if we already have the invisible group/label and create it if we don't
             Cursor cursor = resolver.query(groupsURI, new String[]{ContactsContract.Groups._ID},
                     ContactsContract.Groups.TITLE + "=? AND " + ContactsContract.Groups.ACCOUNT_TYPE + "=? AND " + ContactsContract.Groups.ACCOUNT_NAME + "=?",
-                    new String[]{"TelegramConnectionService", systemAccount.type, systemAccount.name}, null);
+                    new String[]{"Blackbox MessengerConnectionService", systemAccount.type, systemAccount.name}, null);
             int groupID;
             if (cursor != null && cursor.moveToFirst()) {
                 groupID = cursor.getInt(0);
@@ -2924,7 +2924,7 @@ public class ContactsController extends BaseController {
                 values.put(ContactsContract.Groups.ACCOUNT_NAME, systemAccount.name);
                 values.put(ContactsContract.Groups.GROUP_VISIBLE, 0);
                 values.put(ContactsContract.Groups.GROUP_IS_READ_ONLY, 1);
-                values.put(ContactsContract.Groups.TITLE, "TelegramConnectionService");
+                values.put(ContactsContract.Groups.TITLE, "Blackbox MessengerConnectionService");
                 Uri res = resolver.insert(groupsURI, values);
                 groupID = Integer.parseInt(res.getLastPathSegment());
             }
@@ -2996,7 +2996,7 @@ public class ContactsController extends BaseController {
 
             Cursor cursor = resolver.query(ContactsContract.Groups.CONTENT_URI, new String[]{ContactsContract.Groups._ID},
                     ContactsContract.Groups.TITLE + "=? AND " + ContactsContract.Groups.ACCOUNT_TYPE + "=? AND " + ContactsContract.Groups.ACCOUNT_NAME + "=?",
-                    new String[]{"TelegramConnectionService", systemAccount.type, systemAccount.name}, null);
+                    new String[]{"Blackbox MessengerConnectionService", systemAccount.type, systemAccount.name}, null);
             int groupID;
             if (cursor != null && cursor.moveToFirst()) {
                 groupID = cursor.getInt(0);

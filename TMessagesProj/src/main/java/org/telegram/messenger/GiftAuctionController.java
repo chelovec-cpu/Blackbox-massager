@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import static org.telegram.ui.Stars.StarsController.findAttribute;
 

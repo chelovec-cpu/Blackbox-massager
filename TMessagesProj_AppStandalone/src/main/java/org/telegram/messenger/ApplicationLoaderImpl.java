@@ -1,6 +1,6 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.AndroidUtilities.isInAirplaneMode;
+import static com.blackbox.messenger.AndroidUtilities.isInAirplaneMode;
 import static org.telegram.ui.PremiumPreviewFragment.applyNewSpan;
 
 import android.app.Activity;
@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import androidx.core.content.FileProvider;
 
 import org.json.JSONObject;
-import org.telegram.messenger.web.BuildConfig;
-import org.telegram.messenger.web.R;
+import com.blackbox.messenger.web.BuildConfig;
+import com.blackbox.messenger.web.R;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TL_smsjobs;
 import org.telegram.tgnet.TLRPC;

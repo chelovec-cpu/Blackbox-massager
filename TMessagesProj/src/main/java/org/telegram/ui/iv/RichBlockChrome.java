@@ -1,13 +1,13 @@
 package org.telegram.ui.iv;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.text.TextPaint;
 import android.view.View;
 
-import org.telegram.messenger.LocaleController;
+import com.blackbox.messenger.LocaleController;
 import org.telegram.ui.ActionBar.Theme;
 
 /**

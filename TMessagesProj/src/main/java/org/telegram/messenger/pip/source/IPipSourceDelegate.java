@@ -1,4 +1,4 @@
-package org.telegram.messenger.pip.source;
+package com.blackbox.messenger.pip.source;
 
 import android.app.RemoteAction;
 import android.graphics.Bitmap;

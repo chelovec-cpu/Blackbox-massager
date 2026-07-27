@@ -1,6 +1,6 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.CacheByChatsController.KEEP_MEDIA_TYPE_STORIES;
+import static com.blackbox.messenger.CacheByChatsController.KEEP_MEDIA_TYPE_STORIES;
 
 import android.util.SparseArray;
 

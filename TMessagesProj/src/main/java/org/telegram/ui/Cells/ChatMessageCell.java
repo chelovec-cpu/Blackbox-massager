@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -8,16 +8,16 @@
 
 package org.telegram.ui.Cells;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.dpf2;
-import static org.telegram.messenger.AndroidUtilities.find;
-import static org.telegram.messenger.AndroidUtilities.lerp;
-import static org.telegram.messenger.LocaleController.formatPluralString;
-import static org.telegram.messenger.LocaleController.formatPluralStringComma;
-import static org.telegram.messenger.LocaleController.formatString;
-import static org.telegram.messenger.LocaleController.getString;
-import static org.telegram.messenger.MessageObject.getMedia;
-import static org.telegram.messenger.MessageObject.replaceWithLink;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.find;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.LocaleController.formatPluralString;
+import static com.blackbox.messenger.LocaleController.formatPluralStringComma;
+import static com.blackbox.messenger.LocaleController.formatString;
+import static com.blackbox.messenger.LocaleController.getString;
+import static com.blackbox.messenger.MessageObject.getMedia;
+import static com.blackbox.messenger.MessageObject.replaceWithLink;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -100,49 +100,49 @@ import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
 import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AppGlobalConfig;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BotForumHelper;
-import org.telegram.messenger.BotInlineKeyboard;
-import org.telegram.messenger.ChatMessageSharedResources;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.CodeHighlighting;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.DocumentObject;
-import org.telegram.messenger.DownloadController;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.FlagSecureReason;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LiteMode;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.RichMessageLayout;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.SvgHelper;
-import org.telegram.messenger.TranslateController;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.WebFile;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.utils.Choreographer60FpsContent;
-import org.telegram.messenger.utils.CountdownTimer;
-import org.telegram.messenger.utils.DrawableUtils;
-import org.telegram.messenger.utils.tlutils.TlUtils;
-import org.telegram.messenger.video.OldVideoPlayerRewinder;
+import com.blackbox.messenger.AccountInstance;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.AppGlobalConfig;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BotForumHelper;
+import com.blackbox.messenger.BotInlineKeyboard;
+import com.blackbox.messenger.ChatMessageSharedResources;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.CodeHighlighting;
+import com.blackbox.messenger.ContactsController;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.DocumentObject;
+import com.blackbox.messenger.DownloadController;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.FlagSecureReason;
+import com.blackbox.messenger.ImageLoader;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.LiteMode;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MediaDataController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.RichMessageLayout;
+import com.blackbox.messenger.SendMessagesHelper;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.SvgHelper;
+import com.blackbox.messenger.TranslateController;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.WebFile;
+import com.blackbox.messenger.browser.Browser;
+import com.blackbox.messenger.utils.Choreographer60FpsContent;
+import com.blackbox.messenger.utils.CountdownTimer;
+import com.blackbox.messenger.utils.DrawableUtils;
+import com.blackbox.messenger.utils.tlutils.TlUtils;
+import com.blackbox.messenger.video.OldVideoPlayerRewinder;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -9530,7 +9530,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                         }
                     } else {
                         currentMapProvider = MessagesController.getInstance(messageObject.currentAccount).mapProvider;
-                        // default to Telegram
+                        // default to Blackbox Messenger
                         if (currentMapProvider != -1) {
                             currentMapProvider = 2;
                         }
@@ -12620,9 +12620,9 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
             (
                 UserConfig.getInstance(currentAccount).isPremium()
                 ||
-                org.telegram.messenger.CloudflareSTT.isConfigured()
+                com.blackbox.messenger.CloudflareSTT.isConfigured()
                 ||
-                org.telegram.messenger.forkgram.ForkOfflineTranscribe.isActive()
+                com.blackbox.messenger.forkgram.ForkOfflineTranscribe.isActive()
                 ||
                 TranscribeButton.isFreeTranscribeInChat(currentMessageObject)
                 ||
@@ -18685,7 +18685,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
             if (currentMessageObject == null) {
                 return;
             }
-            org.telegram.messenger.forkgram.ForkApi.TLRPCMessages(
+            com.blackbox.messenger.forkgram.ForkApi.TLRPCMessages(
                 currentAccount,
                 new ArrayList<>(Arrays.asList(currentMessageObject)),
                 (ArrayList<TLRPC.Message> msgs, org.telegram.tgnet.TLRPC.TL_error e) -> {

@@ -12,10 +12,10 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LiteMode;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.voip.VoIPService;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.LiteMode;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.voip.VoIPService;
 
 import java.util.concurrent.CountDownLatch;
 

@@ -21,24 +21,24 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.forkgram.FolderIcons;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BotWebViewVibrationEffect;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.forkgram.ForkOfflineTranscribe;
-import org.telegram.messenger.forkgram.ForkOfflineTranslate;
-import org.telegram.messenger.forkgram.HiddenAccountHelper;
-import org.telegram.messenger.forkgram.SettingsBackup;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.forkgram.FolderIcons;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BotWebViewVibrationEffect;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaDataController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.browser.Browser;
+import com.blackbox.messenger.forkgram.ForkOfflineTranscribe;
+import com.blackbox.messenger.forkgram.ForkOfflineTranslate;
+import com.blackbox.messenger.forkgram.HiddenAccountHelper;
+import com.blackbox.messenger.forkgram.SettingsBackup;
 import org.telegram.ui.ActionBar.ActionBar;
 import org.telegram.ui.ActionBar.ActionBarMenu;
 import org.telegram.ui.ActionBar.ActionBarMenuItem;
@@ -272,11 +272,11 @@ public class ForkSettingsActivity extends BaseFragment {
     }
 
     public static String getOfflineTranscriberText() {
-        String label = org.telegram.messenger.forkgram.ForkOfflineTranscribe.selectedProviderLabel();
+        String label = com.blackbox.messenger.forkgram.ForkOfflineTranscribe.selectedProviderLabel();
         if (label != null) {
             return label;
         }
-        if (org.telegram.messenger.forkgram.ForkOfflineTranscribe.isEnabled()) {
+        if (com.blackbox.messenger.forkgram.ForkOfflineTranscribe.isEnabled()) {
             return LocaleController.getString(R.string.OfflineTranscriptionMissing);
         }
         return LocaleController.getString(R.string.Disable);
@@ -610,7 +610,7 @@ public class ForkSettingsActivity extends BaseFragment {
         items.add(UItem.asButtonCheck(ID_DISABLE_PARAMETERS_FROM_BOT_LINKS, LocaleController.getString(R.string.DisableParametersFromBotLinks), LocaleController.getString(R.string.DisableParametersFromBotLinksInfo))
             .setChecked(pref("disableParametersFromBotLinks", false)).setMultiline(true));
         items.add(UItem.asButtonCheck(ID_DISABLE_DEFAULT_IN_APP_BROWSER, LocaleController.getString(R.string.DisableDefaultInAppBrowser), LocaleController.getString(R.string.DisableDefaultInAppBrowserInfo))
-            .setChecked(pref("disableDefaultInAppBrowser", org.telegram.messenger.BuildConfig.SKIP_INTERNAL_BROWSER_BY_DEFAULT)).setMultiline(true));
+            .setChecked(pref("disableDefaultInAppBrowser", com.blackbox.messenger.BuildConfig.SKIP_INTERNAL_BROWSER_BY_DEFAULT)).setMultiline(true));
         items.add(UItem.asShadow(null));
 
         items.add(UItem.asHeader(LocaleController.getString(R.string.ForkSectionSystem)));
@@ -826,7 +826,7 @@ public class ForkSettingsActivity extends BaseFragment {
 
     private void showCustomTitleDialog(View view) {
         final String defaultValue = "Fork Client";
-        org.telegram.messenger.forkgram.ForkDialogs.CreateFieldAlert(
+        com.blackbox.messenger.forkgram.ForkDialogs.CreateFieldAlert(
             getContext(),
             LocaleController.getString(R.string.EditAdminRank),
             prefs().getString("forkCustomTitle", defaultValue),
@@ -855,7 +855,7 @@ public class ForkSettingsActivity extends BaseFragment {
     }
 
     private void showWebSocketDomainDialog() {
-        org.telegram.messenger.forkgram.ForkDialogs.CreateFieldAlert(
+        com.blackbox.messenger.forkgram.ForkDialogs.CreateFieldAlert(
             getContext(),
             LocaleController.getString(R.string.WebSocketDomain),
             prefs().getString("webSocketDomain", ""),
@@ -1202,8 +1202,8 @@ public class ForkSettingsActivity extends BaseFragment {
         if (activity == null) {
             return;
         }
-        java.util.List<org.telegram.messenger.forkgram.TranscriberProvider> providers =
-            org.telegram.messenger.forkgram.ForkOfflineTranscribe.availableProviders();
+        java.util.List<com.blackbox.messenger.forkgram.TranscriberProvider> providers =
+            com.blackbox.messenger.forkgram.ForkOfflineTranscribe.availableProviders();
         if (providers.isEmpty()) {
             new AlertDialog.Builder(activity)
                 .setTitle(LocaleController.getString(R.string.OfflineTranscription))
@@ -1216,7 +1216,7 @@ public class ForkSettingsActivity extends BaseFragment {
             return;
         }
 
-        String selectedId = org.telegram.messenger.forkgram.ForkOfflineTranscribe.selectedProviderId();
+        String selectedId = com.blackbox.messenger.forkgram.ForkOfflineTranscribe.selectedProviderId();
         String[] options = new String[providers.size() + 1];
         options[0] = LocaleController.getString(R.string.Disable);
         int selectedIndex = 0;
@@ -1229,8 +1229,8 @@ public class ForkSettingsActivity extends BaseFragment {
 
         View footer = createEngineInfoView(activity, R.string.OfflineTranscriptionInfo, ForkOfflineTranscribe.SUGGESTED_FDROID_URL);
         showRadioDialog(LocaleController.getString(R.string.OfflineTranscription), options, selectedIndex, footer, index -> {
-            org.telegram.messenger.forkgram.TranscriberProvider selected = index == 0 ? null : providers.get(index - 1);
-            org.telegram.messenger.forkgram.ForkOfflineTranscribe.setProvider(selected);
+            com.blackbox.messenger.forkgram.TranscriberProvider selected = index == 0 ? null : providers.get(index - 1);
+            com.blackbox.messenger.forkgram.ForkOfflineTranscribe.setProvider(selected);
             listView.adapter.update(false);
             if (selected != null) {
                 warnIfModelMissing(selected);
@@ -1238,10 +1238,10 @@ public class ForkSettingsActivity extends BaseFragment {
         });
     }
 
-    private void warnIfModelMissing(org.telegram.messenger.forkgram.TranscriberProvider provider) {
+    private void warnIfModelMissing(com.blackbox.messenger.forkgram.TranscriberProvider provider) {
         new Thread(() -> {
             org.opentranscribe.api.TranscriberCapabilities caps =
-                org.telegram.messenger.forkgram.ForkOfflineTranscribe.capabilitiesOf(provider);
+                com.blackbox.messenger.forkgram.ForkOfflineTranscribe.capabilitiesOf(provider);
             if (caps != null && !caps.modelReady) {
                 AndroidUtilities.runOnUIThread(() -> {
                     if (getParentActivity() == null) {

@@ -11,8 +11,8 @@ import android.view.ViewConfiguration;
 
 import androidx.core.math.MathUtils;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BotWebViewVibrationEffect;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.BotWebViewVibrationEffect;
 import org.telegram.ui.Components.CubicBezierInterpolator;
 import org.telegram.ui.Components.Size;
 

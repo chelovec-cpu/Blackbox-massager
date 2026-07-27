@@ -10,7 +10,7 @@ import android.graphics.PorterDuffXfermode;
 import android.view.Gravity;
 import android.view.ViewGroup;
 
-import org.telegram.messenger.AndroidUtilities;
+import com.blackbox.messenger.AndroidUtilities;
 import org.telegram.tgnet.tl.TL_stories;
 import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.RectOld;

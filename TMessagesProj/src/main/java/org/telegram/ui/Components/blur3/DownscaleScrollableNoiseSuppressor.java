@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.blur3;
 
-import static org.telegram.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
 
 import android.graphics.Canvas;
 import android.graphics.RecordingCanvas;
@@ -14,9 +14,9 @@ import android.os.Build;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import org.telegram.messenger.LiteMode;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.utils.RenderNodeEffects;
+import com.blackbox.messenger.LiteMode;
+import com.blackbox.messenger.MediaDataController;
+import com.blackbox.messenger.utils.RenderNodeEffects;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.blur3.capture.IBlur3Capture;
 

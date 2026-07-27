@@ -11,8 +11,8 @@ import android.widget.CheckBox;
 
 import androidx.core.content.ContextCompat;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.GenericProvider;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.GenericProvider;
 import org.telegram.ui.ActionBar.Theme;
 
 public class CheckBox2 extends View {

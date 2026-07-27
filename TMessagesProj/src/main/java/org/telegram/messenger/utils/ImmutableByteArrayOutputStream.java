@@ -1,4 +1,4 @@
-package org.telegram.messenger.utils;
+package com.blackbox.messenger.utils;
 
 import java.io.IOException;
 import java.io.OutputStream;

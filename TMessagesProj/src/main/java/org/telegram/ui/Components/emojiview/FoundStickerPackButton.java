@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.emojiview;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.os.Build;
 
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.utils.ViewOutlineProviderImpl;
+import com.blackbox.messenger.utils.ViewOutlineProviderImpl;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.CubicBezierInterpolator;
 import org.telegram.ui.Stories.recorder.ButtonWithCounterView;

@@ -2,7 +2,7 @@ package org.telegram.tgnet.tl;
 
 import android.graphics.Bitmap;
 
-import org.telegram.messenger.MessageObject;
+import com.blackbox.messenger.MessageObject;
 import org.telegram.tgnet.InputSerializedData;
 import org.telegram.tgnet.OutputSerializedData;
 import org.telegram.tgnet.TLMethod;

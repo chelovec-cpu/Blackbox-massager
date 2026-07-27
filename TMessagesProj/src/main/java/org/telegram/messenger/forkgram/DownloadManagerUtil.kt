@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
 import android.app.DownloadManager
 import android.content.ActivityNotFoundException

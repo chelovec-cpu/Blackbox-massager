@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -8,11 +8,11 @@
 
 package org.telegram.ui;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.lerp;
-import static org.telegram.messenger.LocaleController.formatPluralStringComma;
-import static org.telegram.messenger.LocaleController.formatString;
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.LocaleController.formatPluralStringComma;
+import static com.blackbox.messenger.LocaleController.formatString;
+import static com.blackbox.messenger.LocaleController.getString;
 import static org.telegram.ui.bots.AffiliateProgramFragment.percents;
 
 import android.Manifest;
@@ -135,69 +135,69 @@ import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.zxing.common.detector.MathUtils;
 
 import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BotForumHelper;
-import org.telegram.messenger.BotInlineKeyboard;
-import org.telegram.messenger.BotWebViewVibrationEffect;
-import org.telegram.messenger.BuildConfig;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.ChannelBoostsController;
-import org.telegram.messenger.ChatMessageSharedResources;
-import org.telegram.messenger.ChatMessagesMetadataController;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ChatThemeController;
-import org.telegram.messenger.CodeHighlighting;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.DocumentObject;
-import org.telegram.messenger.DownloadController;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.EmojiData;
-import org.telegram.messenger.FactCheckController;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.FlagSecureReason;
-import org.telegram.messenger.HashtagSearchController;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LiteMode;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagePreviewParams;
-import org.telegram.messenger.MessageSuggestionParams;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.NotificationsController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SecretChatHelper;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.SvgHelper;
-import org.telegram.messenger.Timer;
-import org.telegram.messenger.TranslateController;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.VideoEditedInfo;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.camera.CameraView;
-import org.telegram.messenger.forkgram.ForkUtils;
-import org.telegram.messenger.forkgram.ExtractMediaFromPreview;
-import org.telegram.messenger.forkgram.FormattingMenu;
-import org.telegram.messenger.support.LongSparseIntArray;
-import org.telegram.messenger.utils.FBool;
-import org.telegram.messenger.utils.OnPostDrawView;
-import org.telegram.messenger.utils.PhotoUtilities;
-import org.telegram.messenger.utils.RectFMergeBounding;
-import org.telegram.messenger.utils.ViewOutlineProviderImpl;
-import org.telegram.messenger.utils.tlutils.TlUtils;
-import org.telegram.messenger.voip.VoIPService;
+import com.blackbox.messenger.AccountInstance;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BotForumHelper;
+import com.blackbox.messenger.BotInlineKeyboard;
+import com.blackbox.messenger.BotWebViewVibrationEffect;
+import com.blackbox.messenger.BuildConfig;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.ChannelBoostsController;
+import com.blackbox.messenger.ChatMessageSharedResources;
+import com.blackbox.messenger.ChatMessagesMetadataController;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.ChatThemeController;
+import com.blackbox.messenger.CodeHighlighting;
+import com.blackbox.messenger.ContactsController;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.DocumentObject;
+import com.blackbox.messenger.DownloadController;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.EmojiData;
+import com.blackbox.messenger.FactCheckController;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.FlagSecureReason;
+import com.blackbox.messenger.HashtagSearchController;
+import com.blackbox.messenger.ImageLoader;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.LiteMode;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MediaDataController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagePreviewParams;
+import com.blackbox.messenger.MessageSuggestionParams;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.MessagesStorage;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.NotificationsController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SecretChatHelper;
+import com.blackbox.messenger.SendMessagesHelper;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.SvgHelper;
+import com.blackbox.messenger.Timer;
+import com.blackbox.messenger.TranslateController;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.VideoEditedInfo;
+import com.blackbox.messenger.browser.Browser;
+import com.blackbox.messenger.camera.CameraView;
+import com.blackbox.messenger.forkgram.ForkUtils;
+import com.blackbox.messenger.forkgram.ExtractMediaFromPreview;
+import com.blackbox.messenger.forkgram.FormattingMenu;
+import com.blackbox.messenger.support.LongSparseIntArray;
+import com.blackbox.messenger.utils.FBool;
+import com.blackbox.messenger.utils.OnPostDrawView;
+import com.blackbox.messenger.utils.PhotoUtilities;
+import com.blackbox.messenger.utils.RectFMergeBounding;
+import com.blackbox.messenger.utils.ViewOutlineProviderImpl;
+import com.blackbox.messenger.utils.tlutils.TlUtils;
+import com.blackbox.messenger.voip.VoIPService;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -306,7 +306,7 @@ import org.telegram.ui.Stars.StarsController;
 import org.telegram.ui.Stars.StarsIntroActivity;
 import org.telegram.ui.Stars.StarsReactionsSheet;
 import org.telegram.ui.Stars.MessageSuggestionOfferSheet;
-import org.telegram.messenger.utils.tlutils.AmountUtils;
+import com.blackbox.messenger.utils.tlutils.AmountUtils;
 import org.telegram.ui.Stories.StoriesListPlaceProvider;
 import org.telegram.ui.Stories.StoriesUtilities;
 import org.telegram.ui.Stories.PublicStoriesList;
@@ -4262,21 +4262,21 @@ public class ChatActivity extends BaseFragment implements
                     SharedPreferences preferences = MessagesController.getGlobalMainSettings();
                     preferences.edit().putBoolean("hideTitle", SharedConfig.hideTitleDialog).commit();
                 } else if (id == goToFirstMessage) {
-                    // This is timestamp of launch date of the Telegram.
+                    // This is timestamp of launch date of the Blackbox Messenger.
                     // August 2013.
                     jumpToDate(1375350800);
                 } else if (id == deleteAllYourMessages) {
-                    org.telegram.messenger.forkgram.ForkDialogs.CreateDeleteAllYourMessagesAlert(
+                    com.blackbox.messenger.forkgram.ForkDialogs.CreateDeleteAllYourMessagesAlert(
                         currentAccount,
                         dialog_id,
                         getParentActivity());
                 } else if (id == deleteAllYourMessagesInAllTopics) {
-                    org.telegram.messenger.forkgram.ForkDialogs.CreateDeleteAllYourMessagesInAllTopicsAlert(
+                    com.blackbox.messenger.forkgram.ForkDialogs.CreateDeleteAllYourMessagesInAllTopicsAlert(
                         currentAccount,
                         dialog_id,
                         getParentActivity());
                 } else if (id == deleteAllUnpinnedMessages) {
-                    org.telegram.messenger.forkgram.ForkDialogs.CreateDeleteAllUnpinnedMessagesAlert(
+                    com.blackbox.messenger.forkgram.ForkDialogs.CreateDeleteAllUnpinnedMessagesAlert(
                         currentAccount,
                         dialog_id,
                         getParentActivity());
@@ -30011,7 +30011,7 @@ public class ChatActivity extends BaseFragment implements
                     span.full = false;
                     emoji.setSpan(span, 0, emoji.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
-                SpannableString link = new SpannableString(LocaleController.getString(R.string.TelegramPremium));
+                SpannableString link = new SpannableString(LocaleController.getString(R.string.Blackbox MessengerPremium));
                 link.setSpan(new ClickableSpan() {
                     @Override
                     public void onClick(@NonNull View view) {
@@ -30948,7 +30948,7 @@ public class ChatActivity extends BaseFragment implements
         if (chatListView == null) {
             return false;
         }
-        if (org.telegram.messenger.MessagesController.getGlobalMainSettings().getBoolean("disablePlayVisibleVideoOnVolume", false)) {
+        if (com.blackbox.messenger.MessagesController.getGlobalMainSettings().getBoolean("disablePlayVisibleVideoOnVolume", false)) {
             return false;
         }
         MessageObject playingMessage = MediaController.getInstance().getPlayingMessageObject();
@@ -44770,11 +44770,11 @@ public class ChatActivity extends BaseFragment implements
         final boolean isMail = str.startsWith("mailto:");
 
         if (!isMail) {
-            options.add(customTabs && !isHashtag ? R.drawable.menu_website : R.drawable.msg_openin, getString(customTabs && !isHashtag ? R.string.OpenInTelegramBrowser2 : R.string.Open), () -> {
+            options.add(customTabs && !isHashtag ? R.drawable.menu_website : R.drawable.msg_openin, getString(customTabs && !isHashtag ? R.string.OpenInBlackbox MessengerBrowser2 : R.string.Open), () -> {
                 if (str.startsWith("video?")) {
                     didPressMessageUrl(span, false, messageObject, cell);
                 } else if (customTabs && !isHashtag) {
-                    Browser.openInTelegramBrowser(getParentActivity(), str, null);
+                    Browser.openInBlackbox MessengerBrowser(getParentActivity(), str, null);
                 } else {
                     logSponsoredClicked(messageObject, false, false);
                     openClickableLink(span, str, false, cell, messageObject, false);
@@ -44798,16 +44798,16 @@ public class ChatActivity extends BaseFragment implements
                 }
             });
         } else if (!isMail && !isHashtag && !customTabs && allowCustomTabs && !inAppBrowser) {
-            options.add(R.drawable.menu_website, getString(R.string.OpenInTelegramBrowser2), () -> {
+            options.add(R.drawable.menu_website, getString(R.string.OpenInBlackbox MessengerBrowser2), () -> {
                 if (MessagesController.getInstance(currentAccount).isWebBrowserExceptionsLimitReached(false)) {
-                    Browser.openInTelegramBrowser(getParentActivity(), str, null);
+                    Browser.openInBlackbox MessengerBrowser(getParentActivity(), str, null);
                 } else {
                     AlertsCreator.showOpenExternalBrowserAlert(getParentActivity(), themeDelegate, str, false, true, (confirmed, checked) -> {
                         if (confirmed) {
                             if (checked) {
                                 getMessagesController().addWebBrowserException(str, false);
                             }
-                            Browser.openInTelegramBrowser(getParentActivity(), str, null);
+                            Browser.openInBlackbox MessengerBrowser(getParentActivity(), str, null);
                         }
                     });
                 }
@@ -45261,7 +45261,7 @@ public class ChatActivity extends BaseFragment implements
                 options.addGap();
             }
             if (user == null) {
-                options.add(R.drawable.menu_invit_telegram, getString(R.string.InviteToTelegramShort), () -> {
+                options.add(R.drawable.menu_invit_telegram, getString(R.string.InviteToBlackbox MessengerShort), () -> {
                     if (getParentActivity() == null) return;
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", phone, null));
@@ -45279,14 +45279,14 @@ public class ChatActivity extends BaseFragment implements
                     BulletinFactory.of(this).createCopyBulletin(LocaleController.getString(R.string.PhoneCopied)).show();
                 });
                 options.addGap();
-                options.addText(getString(R.string.NumberNotOnTelegram), 13);
+                options.addText(getString(R.string.NumberNotOnBlackbox Messenger), 13);
             } else {
                 options.add(R.drawable.msg_discussion, getString(R.string.SendMessage), () -> presentFragment(ChatActivity.of(user.id)));
                 if (!UserObject.isUserSelf(user)) {
-                    options.add(R.drawable.msg_calls, getString(R.string.VoiceCallViaTelegram), () -> {
+                    options.add(R.drawable.msg_calls, getString(R.string.VoiceCallViaBlackbox Messenger), () -> {
                         VoIPHelper.startCall(user, false, userInfo != null && userInfo.video_calls_available, getParentActivity(), userInfo, getAccountInstance());
                     });
-                    options.add(R.drawable.msg_videocall, getString(R.string.VideoCallViaTelegram), () -> {
+                    options.add(R.drawable.msg_videocall, getString(R.string.VideoCallViaBlackbox Messenger), () -> {
                         VoIPHelper.startCall(user, true, userInfo != null && userInfo.video_calls_available, getParentActivity(), userInfo, getAccountInstance());
                     });
                 }

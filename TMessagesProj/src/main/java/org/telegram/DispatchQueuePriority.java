@@ -1,6 +1,6 @@
 package org.telegram;
 
-import org.telegram.messenger.FileLog;
+import com.blackbox.messenger.FileLog;
 
 import java.util.Comparator;
 import java.util.concurrent.CountDownLatch;

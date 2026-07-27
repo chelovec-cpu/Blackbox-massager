@@ -57,7 +57,7 @@
     <string name="BotSkipFullscreenInfo">عدم السماح للتطبيقات المصغرة بالتبديل إلى وضع ملء الشاشة.</string>
     <string name="DisableParametersFromBotLinksInfo">إزالة معاملات البدء من روابط البوتات قبل فتحها.</string>
     <string name="DisableDefaultInAppBrowserInfo">فتح الروابط في متصفح النظام بدلاً من المتصفح المدمج.</string>
-    <string name="LockPremiumInfo">إخفاء إعلانات Telegram Premium وزر الاشتراك. إعادة التشغيل مطلوبة.</string>
+    <string name="LockPremiumInfo">إخفاء إعلانات Blackbox Messenger Premium وزر الاشتراك. إعادة التشغيل مطلوبة.</string>
     <string name="DisableTabletModeInfo">استخدام تخطيط الهاتف على الأجهزة اللوحية. سيُعاد تشغيل التطبيق فوراً.</string>
     <string name="VoiceMessageQuality">جودة الرسائل الصوتية</string>
     <string name="UpdateCheckInterval">فترة التحقق من التحديثات</string>
@@ -110,7 +110,7 @@
     <string name="DisableThumbsInDialogList">تعطيل الصور المصغرة في قائمة المحادثات</string>
     <string name="FullRecentStickers">عرض القائمة الكاملة للملصقات الحديثة</string>
     <string name="ShowArchivedStickers">عرض حزم الملصقات المؤرشفة</string>
-    <string name="ShowArchivedStickersInfo">عرض حزم الملصقات المؤرشفة بسبب حد الـ 200 حزمة في Telegram ضمن لوحة الملصقات. تبقى الحزم مؤرشفة ويتم تحميلها عند الحاجة.</string>
+    <string name="ShowArchivedStickersInfo">عرض حزم الملصقات المؤرشفة بسبب حد الـ 200 حزمة في Blackbox Messenger ضمن لوحة الملصقات. تبقى الحزم مؤرشفة ويتم تحميلها عند الحاجة.</string>
     <string name="HideSendAs">إخفاء زر "إرسال كـ"</string>
     <string name="ShowNotificationContent">عرض محتوى الإشعارات</string>
     <string name="ShowNotificationContentInfo">عند قفل التطبيق. قد يكون سببًا لتسرب الخصوصية.</string>
@@ -566,13 +566,13 @@
     <string name="LanguageUnknownCustomAlert">للأسف، لا تحتوي حزمة اللغة المخصصةُ هذه (**%1$s **) على بيانات لتيليجرام للأندرويد.</string>
     <string name="AskAQuestionInfo">الدعم الفني في تيليجرام يقوم به متطوعون يحاولون الرد سريعًا قدر الإمكان، لكن ذلك قد يستغرق بعض الوقت.\n\nيرجى الاطلاع على<![CDATA[<a href=\"https://telegram.org/faq/ar#a\"> الأسئلة الشائعة عن تيليجرام</a>]]> فهي تحوي إجابات لمعظم الأسئلة  <![CDATA[<a href=\"https://telegram.org/faq/ar#j\">وحلولًا للعديد من المشاكل.</a>]]></string>
     <string name="AskButton">اسأل متطوعًا</string>
-    <string name="TelegramFAQ">الأسئلة الشائعة</string>
-    <string name="TelegramFaq">الأسئلة الشائعة</string>
-    <string name="TelegramFeatures">ميزات تيليجرام</string>
-    <string name="TelegramFeaturesUrl">https://t.me/TelegramTipsAR/128</string>
+    <string name="Blackbox MessengerFAQ">الأسئلة الشائعة</string>
+    <string name="Blackbox MessengerFaq">الأسئلة الشائعة</string>
+    <string name="Blackbox MessengerFeatures">ميزات تيليجرام</string>
+    <string name="Blackbox MessengerFeaturesUrl">https://t.me/Blackbox MessengerTipsAR/128</string>
     <string name="AddAccount">إضافة حساب</string>
     <string name="SelectAccount">اختيار حساب</string>
-    <string name="TelegramFaqUrl">https://telegram.org/faq/ar</string>
+    <string name="Blackbox MessengerFaqUrl">https://telegram.org/faq/ar</string>
     <string name="PrivacyPolicy">سياسة الخصوصية</string>
     <string name="TermsOfService">شروط الخدمة</string>
     <string name="TermsOfServiceLogin">تسجيلك يعني موافقتك\nعلى *شروط الخدمة*.</string>
@@ -715,7 +715,7 @@
     <string name="DirectShareInfo">إظهار آخر المحادثات في قائمة المشاركة</string>
     <string name="Emoji">الرموز التعبيرية</string>
     <string name="LargeEmoji">رموز تعبيرية كبيرة</string>
-    <string name="TelegramVersion">تيليجرام للأندرويد %1$s</string>
+    <string name="Blackbox MessengerVersion">تيليجرام للأندرويد %1$s</string>
     <string name="ChangeLanguageLater">يمكنك تغيير لغة التطبيق لاحقًا من الإعدادات.</string>
     <string name="ChooseYourLanguage">اختيار اللغة</string>
     <string name="ChooseYourLanguageOther">أخرى</string>
@@ -748,13 +748,13 @@
     <string name="UseProxySecret">السر</string>
     <string name="UseProxyUsername">اسم المستخدم</string>
     <string name="UseProxySocks5">بروكسي SOCKS5</string>
-    <string name="UseProxyTelegram">بروكسي MTProto</string>
-    <string name="UseProxyTelegramError">لم يتم إعداد البروكسي الذي تستخدمه بشكل صحيح وسيتم تعطيله. يرجى العثور على واحد آخر.</string>
+    <string name="UseProxyBlackbox Messenger">بروكسي MTProto</string>
+    <string name="UseProxyBlackbox MessengerError">لم يتم إعداد البروكسي الذي تستخدمه بشكل صحيح وسيتم تعطيله. يرجى العثور على واحد آخر.</string>
     <string name="UseProxySponsor">راعي البروكسي</string>
     <string name="UseProxySponsorInfo">تُعرض هذه القناة من قبل البروكسي. يمكنك إزالة هذه القناة من قائمة محادثاتك بتعطيل اتصال البروكسي من إعدادات تيليجرام&gt; البيانات والتخزين.</string>
     <string name="UseProxyInfo">إعدادات بروكسي SOCKS5</string>
-    <string name="UseProxyTelegramInfo">إعدادات بروكسي MTProto.</string>
-    <string name="UseProxyTelegramInfo2">قد يعرض هذا البروكسي قناة إعلانية في قائمة محادثاتك.\nلن يكشف هذا عن نشاطك في تيليجرام.</string>
+    <string name="UseProxyBlackbox MessengerInfo">إعدادات بروكسي MTProto.</string>
+    <string name="UseProxyBlackbox MessengerInfo2">قد يعرض هذا البروكسي قناة إعلانية في قائمة محادثاتك.\nلن يكشف هذا عن نشاطك في تيليجرام.</string>
     <string name="UseProxyForCalls">استخدام البروكسي للمكالمات</string>
     <string name="UseProxyForCallsInfo">قد تقلل خوادم البروكسي من جودة مكالماتك.</string>
     <string name="ConnectingToProxyEnable">تفعيل</string>
@@ -1196,7 +1196,7 @@
     <string name="DeleteAll">حذف الكل</string>
     <string name="StopLoadingTitle">إيقاف التحميل؟</string>
     <string name="StopLoading">هل تريدون إلغاء التحميل؟</string>
-    <string name="UpdateTelegram">تحديث تيليجرام</string>
+    <string name="UpdateBlackbox Messenger">تحديث تيليجرام</string>
     <string name="UpdateAppAlert">عذرًا، تطبيق تيليجرام الذي تملكه قديم ولا يمكنه التعامل مع هذا الطلب، يرجى القيام بتحديثه.</string>
     <string name="InvalidPhoneNumber">رقم هاتف غير صالح، يرجى التحقق من الرقم والمحاولة مرة أخرى.</string>
     <string name="PleaseLoginPassport">يرجى تسجيل الدخول إلى حسابك في تيليجرام لتتمكن من استخدام جواز تيليجرام.</string>

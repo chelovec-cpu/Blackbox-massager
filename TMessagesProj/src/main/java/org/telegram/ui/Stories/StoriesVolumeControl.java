@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
+import com.blackbox.messenger.AndroidUtilities;
 import org.telegram.ui.Components.AnimatedFloat;
 
 public class StoriesVolumeControl extends View {

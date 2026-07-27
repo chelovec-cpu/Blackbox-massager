@@ -1,13 +1,13 @@
-package org.telegram.messenger.car;
+package com.blackbox.messenger.car;
 
 import androidx.annotation.NonNull;
 import androidx.car.app.CarAppService;
 import androidx.car.app.Session;
 import androidx.car.app.validation.HostValidator;
 
-import org.telegram.messenger.BuildVars;
+import com.blackbox.messenger.BuildVars;
 
-public class TelegramCarAppService extends CarAppService {
+public class Blackbox MessengerCarAppService extends CarAppService {
 
     @NonNull
     @Override
@@ -24,6 +24,6 @@ public class TelegramCarAppService extends CarAppService {
     @NonNull
     @Override
     public Session onCreateSession() {
-        return new TelegramCarSession();
+        return new Blackbox MessengerCarSession();
     }
 }

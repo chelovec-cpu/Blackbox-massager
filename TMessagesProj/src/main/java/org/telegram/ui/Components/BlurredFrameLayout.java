@@ -10,9 +10,9 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SharedConfig;
 
 public class BlurredFrameLayout extends FrameLayout {
 

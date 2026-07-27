@@ -1,18 +1,18 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.MessagesController.LOAD_AROUND_DATE;
-import static org.telegram.messenger.MessagesController.LOAD_AROUND_MESSAGE;
-import static org.telegram.messenger.MessagesController.LOAD_BACKWARD;
-import static org.telegram.messenger.MessagesController.LOAD_FORWARD;
-import static org.telegram.messenger.MessagesController.LOAD_FROM_UNREAD;
+import static com.blackbox.messenger.MessagesController.LOAD_AROUND_DATE;
+import static com.blackbox.messenger.MessagesController.LOAD_AROUND_MESSAGE;
+import static com.blackbox.messenger.MessagesController.LOAD_BACKWARD;
+import static com.blackbox.messenger.MessagesController.LOAD_FORWARD;
+import static com.blackbox.messenger.MessagesController.LOAD_FROM_UNREAD;
 
 import android.appwidget.AppWidgetManager;
 import android.content.SharedPreferences;
@@ -34,12 +34,12 @@ import org.telegram.SQLite.SQLiteCursor;
 import org.telegram.SQLite.SQLiteDatabase;
 import org.telegram.SQLite.SQLiteException;
 import org.telegram.SQLite.SQLitePreparedStatement;
-import org.telegram.messenger.support.LongSparseIntArray;
-import org.telegram.messenger.utils.EphemeralMessagesHelper;
+import com.blackbox.messenger.support.LongSparseIntArray;
+import com.blackbox.messenger.utils.EphemeralMessagesHelper;
 import org.telegram.tgnet.NativeByteBuffer;
 import org.telegram.tgnet.RequestDelegate;
 import org.telegram.tgnet.TLObject;
-import org.telegram.messenger.forkgram.FolderIcons;
+import com.blackbox.messenger.forkgram.FolderIcons;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.Vector;
 import org.telegram.tgnet.tl.TL_account;

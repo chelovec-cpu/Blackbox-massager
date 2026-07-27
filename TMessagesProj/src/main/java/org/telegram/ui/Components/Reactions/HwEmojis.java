@@ -1,11 +1,11 @@
 package org.telegram.ui.Components.Reactions;
 
-import static org.telegram.messenger.SharedConfig.PERFORMANCE_CLASS_HIGH;
-import static org.telegram.messenger.SharedConfig.getDevicePerformanceClass;
+import static com.blackbox.messenger.SharedConfig.PERFORMANCE_CLASS_HIGH;
+import static com.blackbox.messenger.SharedConfig.getDevicePerformanceClass;
 
 import android.view.View;
 
-import org.telegram.messenger.ImageLoader;
+import com.blackbox.messenger.ImageLoader;
 
 import java.util.Arrays;
 import java.util.HashSet;

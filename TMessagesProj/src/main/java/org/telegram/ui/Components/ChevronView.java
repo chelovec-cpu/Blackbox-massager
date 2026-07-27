@@ -8,7 +8,7 @@ import android.view.View;
 
 import androidx.annotation.IntDef;
 
-import org.telegram.messenger.AndroidUtilities;
+import com.blackbox.messenger.AndroidUtilities;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

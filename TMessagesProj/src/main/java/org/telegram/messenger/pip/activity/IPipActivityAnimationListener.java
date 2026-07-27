@@ -1,4 +1,4 @@
-package org.telegram.messenger.pip.activity;
+package com.blackbox.messenger.pip.activity;
 
 public interface IPipActivityAnimationListener {
     default void onEnterAnimationStart(long estimatedDuration) {}

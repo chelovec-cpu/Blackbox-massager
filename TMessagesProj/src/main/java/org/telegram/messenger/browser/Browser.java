@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2018.
  */
 
-package org.telegram.messenger.browser;
+package com.blackbox.messenger.browser;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -21,26 +21,26 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.CustomTabsCopyReceiver;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.ShareBroadcastReceiver;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.support.customtabs.CustomTabsCallback;
-import org.telegram.messenger.support.customtabs.CustomTabsClient;
-import org.telegram.messenger.support.customtabs.CustomTabsIntent;
-import org.telegram.messenger.support.customtabs.CustomTabsServiceConnection;
-import org.telegram.messenger.support.customtabs.CustomTabsSession;
-import org.telegram.messenger.support.customtabsclient.shared.CustomTabsHelper;
-import org.telegram.messenger.support.customtabsclient.shared.ServiceConnection;
-import org.telegram.messenger.support.customtabsclient.shared.ServiceConnectionCallback;
+import com.blackbox.messenger.AccountInstance;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.CustomTabsCopyReceiver;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.ShareBroadcastReceiver;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.support.customtabs.CustomTabsCallback;
+import com.blackbox.messenger.support.customtabs.CustomTabsClient;
+import com.blackbox.messenger.support.customtabs.CustomTabsIntent;
+import com.blackbox.messenger.support.customtabs.CustomTabsServiceConnection;
+import com.blackbox.messenger.support.customtabs.CustomTabsSession;
+import com.blackbox.messenger.support.customtabsclient.shared.CustomTabsHelper;
+import com.blackbox.messenger.support.customtabsclient.shared.ServiceConnection;
+import com.blackbox.messenger.support.customtabsclient.shared.ServiceConnectionCallback;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_account;
@@ -414,7 +414,7 @@ public class Browser {
                 allowInAppBrowser && BubbleActivity.instance == null &&
                 (uri != null && MessagesController.getInstance(currentAccount).isWebBrowserOpenInApp(uri.toString()) || isInstantViewOpen()) &&
                 TextUtils.isEmpty(browserPackage) &&
-                !MessagesController.getGlobalMainSettings().getBoolean("disableDefaultInAppBrowser", org.telegram.messenger.BuildConfig.SKIP_INTERNAL_BROWSER_BY_DEFAULT) &&
+                !MessagesController.getGlobalMainSettings().getBoolean("disableDefaultInAppBrowser", com.blackbox.messenger.BuildConfig.SKIP_INTERNAL_BROWSER_BY_DEFAULT) &&
                 (uri.getScheme() == null || "https".equals(uri.getScheme()) || "http".equals(uri.getScheme()) || "tonsite".equals(uri.getScheme()))
                 ||
                 isTonsite(uri.toString())
@@ -432,7 +432,7 @@ public class Browser {
                                 uri = Uri.parse(fallbackUrl);
                             }
                         }
-                        openInTelegramBrowser(context, uri.toString(), inCaseLoading);
+                        openInBlackbox MessengerBrowser(context, uri.toString(), inCaseLoading);
                     }
                 } else {
                     openInExternalBrowser(context, uri.toString(), allowIntent, browserPackage);
@@ -484,7 +484,7 @@ public class Browser {
         return fragment != null && fragment.getArticleViewer() != null;
     }
 
-    public static boolean openInTelegramBrowser(Context context, String url, Browser.Progress progress) {
+    public static boolean openInBlackbox MessengerBrowser(Context context, String url, Browser.Progress progress) {
         if (LaunchActivity.instance != null) {
             BottomSheetTabs tabs = LaunchActivity.instance.getBottomSheetTabs();
             if (tabs != null && tabs.tryReopenTab(url) != null) {

@@ -1,4 +1,4 @@
-package org.telegram.messenger.utils;
+package com.blackbox.messenger.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

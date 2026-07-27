@@ -1,4 +1,4 @@
-package org.telegram.messenger.chromecast;
+package com.blackbox.messenger.chromecast;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 //import com.google.android.gms.cast.framework.SessionManagerListener;
 //import com.google.android.gms.cast.framework.media.RemoteMediaClient;
 
-import org.telegram.messenger.ApplicationLoader;
+import com.blackbox.messenger.ApplicationLoader;
 import org.telegram.ui.CastSync;
 import org.telegram.ui.PhotoViewer;
 

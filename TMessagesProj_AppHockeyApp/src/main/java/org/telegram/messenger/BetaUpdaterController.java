@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.app.Activity;
 import android.content.Context;
@@ -107,7 +107,7 @@ public class BetaUpdaterController {
             return;
         }
 
-        final String url = org.telegram.messenger.BuildConfig.BETA_URL;
+        final String url = com.blackbox.messenger.BuildConfig.BETA_URL;
         checkingForUpdate = true;
         firstCheck = false;
         new HttpGetTask(str -> AndroidUtilities.runOnUIThread(() -> {

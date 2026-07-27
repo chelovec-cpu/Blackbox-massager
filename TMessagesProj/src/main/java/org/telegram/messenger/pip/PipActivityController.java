@@ -1,4 +1,4 @@
-package org.telegram.messenger.pip;
+package com.blackbox.messenger.pip;
 
 import android.app.Activity;
 import android.support.v4.media.session.MediaSessionCompat;
@@ -10,12 +10,12 @@ import androidx.annotation.Nullable;
 
 import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.pip.activity.IPipActivityActionListener;
-import org.telegram.messenger.pip.activity.IPipActivityAnimationListener;
-import org.telegram.messenger.pip.activity.IPipActivityHandler;
-import org.telegram.messenger.pip.activity.IPipActivityListener;
-import org.telegram.messenger.pip.utils.PipUtils;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.pip.activity.IPipActivityActionListener;
+import com.blackbox.messenger.pip.activity.IPipActivityAnimationListener;
+import com.blackbox.messenger.pip.activity.IPipActivityHandler;
+import com.blackbox.messenger.pip.activity.IPipActivityListener;
+import com.blackbox.messenger.pip.utils.PipUtils;
 
 import java.util.HashMap;
 

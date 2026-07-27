@@ -6,7 +6,7 @@ import android.graphics.Paint;
 import android.text.Spanned;
 import android.text.style.ReplacementSpan;
 
-import org.telegram.messenger.FileLog;
+import com.blackbox.messenger.FileLog;
 
 import ru.noties.jlatexmath.JLatexMathDrawable;
 

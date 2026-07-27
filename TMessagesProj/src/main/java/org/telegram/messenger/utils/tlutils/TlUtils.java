@@ -1,4 +1,4 @@
-package org.telegram.messenger.utils.tlutils;
+package com.blackbox.messenger.utils.tlutils;
 
 import android.text.TextUtils;
 
@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 
 import org.telegram.tgnet.TLObject;
 
-import org.telegram.messenger.MediaDataController;
+import com.blackbox.messenger.MediaDataController;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_stars;
 

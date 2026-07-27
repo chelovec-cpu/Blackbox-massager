@@ -1,4 +1,4 @@
-package org.telegram.messenger.car;
+package com.blackbox.messenger.car;
 
 import android.content.Intent;
 
@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.car.app.Screen;
 import androidx.car.app.Session;
 
-public class TelegramCarSession extends Session {
+public class Blackbox MessengerCarSession extends Session {
 
     @NonNull
     @Override

@@ -1,4 +1,4 @@
-package org.telegram.messenger.pip.utils;
+package com.blackbox.messenger.pip.utils;
 
 import androidx.annotation.IntDef;
 

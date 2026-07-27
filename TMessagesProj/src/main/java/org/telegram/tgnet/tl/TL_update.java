@@ -1,6 +1,6 @@
 package org.telegram.tgnet.tl;
 
-import org.telegram.messenger.DialogObject;
+import com.blackbox.messenger.DialogObject;
 import org.telegram.tgnet.InputSerializedData;
 import org.telegram.tgnet.OutputSerializedData;
 import org.telegram.tgnet.TLRPC;

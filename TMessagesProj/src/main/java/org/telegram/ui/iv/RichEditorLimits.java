@@ -1,6 +1,6 @@
 package org.telegram.ui.iv;
 
-import org.telegram.messenger.AppGlobalConfig;
+import com.blackbox.messenger.AppGlobalConfig;
 import org.telegram.tgnet.tl.TL_iv;
 
 import java.util.ArrayList;

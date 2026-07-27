@@ -5,7 +5,7 @@ import android.view.View;
 
 import androidx.annotation.CallSuper;
 
-import org.telegram.messenger.ImageReceiver;
+import com.blackbox.messenger.ImageReceiver;
 
 public abstract class PollAttachedMedia {
     protected final ImageReceiver imageReceiver = new ImageReceiver();

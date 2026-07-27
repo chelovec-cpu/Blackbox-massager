@@ -1,4 +1,4 @@
-package org.telegram.messenger.car;
+package com.blackbox.messenger.car;
 
 import android.support.v4.media.session.MediaControllerCompat;
 
@@ -16,11 +16,11 @@ import androidx.core.graphics.drawable.IconCompat;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.TelegramMediaSession;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.Blackbox MessengerMediaSession;
 
 import java.util.ArrayList;
 
@@ -65,7 +65,7 @@ public class MusicSongsScreen extends Screen
     @NonNull
     @Override
     public Template onGetTemplate() {
-        TelegramMediaSession session = TelegramMediaSession.getInstance(getCarContext().getApplicationContext());
+        Blackbox MessengerMediaSession session = Blackbox MessengerMediaSession.getInstance(getCarContext().getApplicationContext());
         String headerTitle = title.isEmpty() ? " " : title;
 
         ArrayList<MessageObject> songs = session.getMusicMessages(dialogId);
@@ -113,7 +113,7 @@ public class MusicSongsScreen extends Screen
 
     private void playAtIndex(int index) {
         try {
-            TelegramMediaSession session = TelegramMediaSession.getInstance(getCarContext().getApplicationContext());
+            Blackbox MessengerMediaSession session = Blackbox MessengerMediaSession.getInstance(getCarContext().getApplicationContext());
             MediaControllerCompat controller = session.getSession().getController();
             controller.getTransportControls().playFromMediaId(dialogId + "_" + index, null);
         } catch (Throwable ignored) {

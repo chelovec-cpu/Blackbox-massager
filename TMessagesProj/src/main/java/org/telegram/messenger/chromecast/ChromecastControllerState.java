@@ -1,10 +1,10 @@
-package org.telegram.messenger.chromecast;
+package com.blackbox.messenger.chromecast;
 
 import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.Utilities;
 
 import java.io.File;
 

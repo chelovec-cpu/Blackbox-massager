@@ -8,8 +8,8 @@ import android.view.MotionEvent;
 
 import com.google.zxing.common.detector.MathUtils;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.UserConfig;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.UserConfig;
 import org.telegram.ui.Components.Size;
 
 import java.util.ArrayList;

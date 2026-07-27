@@ -4,8 +4,8 @@ import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Trace;
 
-import org.telegram.messenger.AnimatedFileDrawableStream;
-import org.telegram.messenger.BuildConfig;
+import com.blackbox.messenger.AnimatedFileDrawableStream;
+import com.blackbox.messenger.BuildConfig;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 

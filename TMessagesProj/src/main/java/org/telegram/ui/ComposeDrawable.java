@@ -1,6 +1,6 @@
 package org.telegram.ui;
 
-import static org.telegram.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
 
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;

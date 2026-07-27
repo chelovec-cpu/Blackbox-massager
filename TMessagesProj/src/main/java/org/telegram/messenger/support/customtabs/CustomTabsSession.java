@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.customtabs;
+package com.blackbox.messenger.support.customtabs;
 
 import android.app.PendingIntent;
 import android.content.ComponentName;

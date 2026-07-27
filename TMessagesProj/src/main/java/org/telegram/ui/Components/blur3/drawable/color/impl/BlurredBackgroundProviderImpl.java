@@ -1,16 +1,16 @@
 package org.telegram.ui.Components.blur3.drawable.color.impl;
 
-import static org.telegram.messenger.AndroidUtilities.dpf2;
+import static com.blackbox.messenger.AndroidUtilities.dpf2;
 
 import android.graphics.Color;
 
 import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
-import org.telegram.messenger.LiteMode;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.UserConfig;
+import com.blackbox.messenger.LiteMode;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.UserConfig;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.blur3.drawable.color.BlurredBackgroundProvider;
 import org.telegram.ui.Components.blur3.drawable.color.BlurredBackgroundProviderBuilder;

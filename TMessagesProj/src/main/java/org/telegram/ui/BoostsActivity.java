@@ -1,6 +1,6 @@
 package org.telegram.ui;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 import static org.telegram.tgnet.TLRPC.TL_payments_checkedGiftCode.NO_USER_ID;
 import static org.telegram.ui.Components.Premium.LimitReachedBottomSheet.TYPE_FEATURES;
 
@@ -29,16 +29,16 @@ import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChannelBoostsController;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ChannelBoostsController;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.ContactsController;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_stories;
@@ -304,7 +304,7 @@ public class BoostsActivity extends GradientHeaderActivity implements Notificati
                 TL_stories.PrepaidGiveaway prepaidGiveaway = item.prepaidGiveaway;
                 GiveawayCell giveawayCell = (GiveawayCell) holder.itemView;
                 if (prepaidGiveaway instanceof TL_stories.TL_prepaidGiveaway) {
-                    String name = LocaleController.formatPluralString("BoostingTelegramPremiumCountPlural", prepaidGiveaway.quantity);
+                    String name = LocaleController.formatPluralString("BoostingBlackbox MessengerPremiumCountPlural", prepaidGiveaway.quantity);
                     String info = LocaleController.formatPluralString("BoostingSubscriptionsCountPlural", prepaidGiveaway.quantity, LocaleController.formatPluralString("PrepaidGiveawayMonths", ((TL_stories.TL_prepaidGiveaway) prepaidGiveaway).months));
                     giveawayCell.setData(prepaidGiveaway, name, info, 0, !item.isLast);
                 } else if (prepaidGiveaway instanceof TL_stories.TL_prepaidStarsGiveaway) {

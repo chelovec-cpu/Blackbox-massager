@@ -1,13 +1,13 @@
-package org.telegram.messenger.video;
+package com.blackbox.messenger.video;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.util.Log;
 
 import com.google.android.exoplayer2.C;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Utilities;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.Utilities;
 import org.telegram.ui.Components.PhotoViewerWebView;
 import org.telegram.ui.Components.SeekSpeedDrawable;
 import org.telegram.ui.Components.VideoForwardDrawable;

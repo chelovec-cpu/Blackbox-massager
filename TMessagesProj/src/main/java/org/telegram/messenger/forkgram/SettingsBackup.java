@@ -1,11 +1,11 @@
-package org.telegram.messenger.forkgram;
+package com.blackbox.messenger.forkgram;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.telegram.messenger.BuildVars;
+import com.blackbox.messenger.BuildVars;
 
 import java.util.HashSet;
 import java.util.Iterator;

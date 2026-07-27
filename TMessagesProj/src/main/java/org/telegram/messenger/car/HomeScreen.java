@@ -1,4 +1,4 @@
-package org.telegram.messenger.car;
+package com.blackbox.messenger.car;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -32,23 +32,23 @@ import androidx.core.graphics.drawable.IconCompat;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.NotificationsController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.TelegramMediaSession;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
+import com.blackbox.messenger.AccountInstance;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.ContactsController;
+import com.blackbox.messenger.DialogObject;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.NotificationsController;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SendMessagesHelper;
+import com.blackbox.messenger.Blackbox MessengerMediaSession;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.UserObject;
 import org.telegram.tgnet.TLRPC;
 
 import java.io.File;
@@ -240,7 +240,7 @@ public class HomeScreen extends Screen
                 .setSelf(selfPerson)
                 .setMessages(carMessages)
                 .setGroupConversation(isGroup)
-                .setConversationCallback(new TelegramConversationCallback(currentAccount, dialogId, latestMid));
+                .setConversationCallback(new Blackbox MessengerConversationCallback(currentAccount, dialogId, latestMid));
         if (icon != null) {
             cb.setIcon(new CarIcon.Builder(icon).build());
         }
@@ -282,7 +282,7 @@ public class HomeScreen extends Screen
     // ===== Music tab =====
 
     private Template buildMusicTemplate() {
-        TelegramMediaSession session = TelegramMediaSession.getInstance(getCarContext().getApplicationContext());
+        Blackbox MessengerMediaSession session = Blackbox MessengerMediaSession.getInstance(getCarContext().getApplicationContext());
         if (!session.isChatsLoaded()) {
             if (!musicLoadKicked) {
                 musicLoadKicked = true;
@@ -396,12 +396,12 @@ public class HomeScreen extends Screen
         }
     }
 
-    private static final class TelegramConversationCallback implements ConversationCallback {
+    private static final class Blackbox MessengerConversationCallback implements ConversationCallback {
         private final int currentAccount;
         private final long dialogId;
         private final int maxId;
 
-        TelegramConversationCallback(int currentAccount, long dialogId, int maxId) {
+        Blackbox MessengerConversationCallback(int currentAccount, long dialogId, int maxId) {
             this.currentAccount = currentAccount;
             this.dialogId = dialogId;
             this.maxId = maxId;

@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.blur3.utils;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.dp;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

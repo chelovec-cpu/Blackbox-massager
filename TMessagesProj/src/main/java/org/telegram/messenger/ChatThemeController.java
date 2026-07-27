@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,9 +9,9 @@ import android.util.LongSparseArray;
 
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.wallpaper.WallpaperBitmapHolder;
-import org.telegram.messenger.wallpaper.WallpaperGiftPatternPosition;
-import org.telegram.messenger.wallpaper.pgm.PGMImage;
+import com.blackbox.messenger.wallpaper.WallpaperBitmapHolder;
+import com.blackbox.messenger.wallpaper.WallpaperGiftPatternPosition;
+import com.blackbox.messenger.wallpaper.pgm.PGMImage;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.ResultCallback;
 import org.telegram.tgnet.SerializedData;

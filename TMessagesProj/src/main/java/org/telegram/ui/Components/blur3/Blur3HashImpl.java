@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.blur3;
 
-import org.telegram.messenger.MediaDataController;
+import com.blackbox.messenger.MediaDataController;
 import org.telegram.ui.Components.blur3.capture.IBlur3Hash;
 
 public class Blur3HashImpl implements IBlur3Hash {

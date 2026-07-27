@@ -1,9 +1,9 @@
-package org.telegram.messenger.forkgram
+package com.blackbox.messenger.forkgram
 
 import android.content.Intent
 import android.os.SystemClock
-import org.telegram.messenger.ApplicationLoader
-import org.telegram.messenger.MessagesController
+import com.blackbox.messenger.ApplicationLoader
+import com.blackbox.messenger.MessagesController
 import java.util.concurrent.ConcurrentHashMap
 import java.util.function.BiConsumer
 import java.util.function.Consumer

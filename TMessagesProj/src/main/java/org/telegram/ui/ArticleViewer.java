@@ -1,5 +1,5 @@
 /*
- * This is the source code of Telegram for Android v. 5.x.x.
+ * This is the source code of Blackbox Messenger for Android v. 5.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -8,14 +8,14 @@
 
 package org.telegram.ui;
 
-import static org.telegram.messenger.AndroidUtilities.dp;
-import static org.telegram.messenger.AndroidUtilities.lerp;
-import static org.telegram.messenger.LocaleController.formatString;
-import static org.telegram.messenger.LocaleController.getString;
-import static org.telegram.messenger.MessageObject.POSITION_FLAG_BOTTOM;
-import static org.telegram.messenger.MessageObject.POSITION_FLAG_LEFT;
-import static org.telegram.messenger.MessageObject.POSITION_FLAG_RIGHT;
-import static org.telegram.messenger.MessageObject.POSITION_FLAG_TOP;
+import static com.blackbox.messenger.AndroidUtilities.dp;
+import static com.blackbox.messenger.AndroidUtilities.lerp;
+import static com.blackbox.messenger.LocaleController.formatString;
+import static com.blackbox.messenger.LocaleController.getString;
+import static com.blackbox.messenger.MessageObject.POSITION_FLAG_BOTTOM;
+import static com.blackbox.messenger.MessageObject.POSITION_FLAG_LEFT;
+import static com.blackbox.messenger.MessageObject.POSITION_FLAG_RIGHT;
+import static com.blackbox.messenger.MessageObject.POSITION_FLAG_TOP;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -117,37 +117,37 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 
 import org.json.JSONObject;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimationNotificationsLocker;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BotGuardHelper;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.CodeHighlighting;
-import org.telegram.messenger.DownloadController;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.FileStreamLoadOperation;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.WebFile;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.utils.WindowVisibilityManager;
-import org.telegram.messenger.video.VideoPlayerHolderBase;
+import com.blackbox.messenger.AndroidUtilities;
+import com.blackbox.messenger.AnimationNotificationsLocker;
+import com.blackbox.messenger.ApplicationLoader;
+import com.blackbox.messenger.BotGuardHelper;
+import com.blackbox.messenger.ChatObject;
+import com.blackbox.messenger.CodeHighlighting;
+import com.blackbox.messenger.DownloadController;
+import com.blackbox.messenger.Emoji;
+import com.blackbox.messenger.FileLoader;
+import com.blackbox.messenger.BuildVars;
+import com.blackbox.messenger.FileLog;
+import com.blackbox.messenger.FileStreamLoadOperation;
+import com.blackbox.messenger.ImageLoader;
+import com.blackbox.messenger.ImageLocation;
+import com.blackbox.messenger.ImageReceiver;
+import com.blackbox.messenger.LocaleController;
+import com.blackbox.messenger.MediaController;
+import com.blackbox.messenger.MediaDataController;
+import com.blackbox.messenger.MessageObject;
+import com.blackbox.messenger.MessagesController;
+import com.blackbox.messenger.MessagesStorage;
+import com.blackbox.messenger.NotificationCenter;
+import com.blackbox.messenger.R;
+import com.blackbox.messenger.SendMessagesHelper;
+import com.blackbox.messenger.SharedConfig;
+import com.blackbox.messenger.UserConfig;
+import com.blackbox.messenger.Utilities;
+import com.blackbox.messenger.WebFile;
+import com.blackbox.messenger.browser.Browser;
+import com.blackbox.messenger.utils.WindowVisibilityManager;
+import com.blackbox.messenger.video.VideoPlayerHolderBase;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -5149,7 +5149,7 @@ public class ArticleViewer extends IArticleViewer implements NotificationCenter.
             Browser.openAsInternalIntent(parentActivity, link);
         } else if (!Browser.openInExternalApp(parentActivity, link, false)) {
             if (pages[0] == null || pages[0].getWebView() == null) {
-                Browser.openInTelegramBrowser(parentActivity, link, null);
+                Browser.openInBlackbox MessengerBrowser(parentActivity, link, null);
             } else {
                 pages[0].getWebView().loadUrl(link);
             }
@@ -5160,7 +5160,7 @@ public class ArticleViewer extends IArticleViewer implements NotificationCenter.
         if (parentActivity == null || entry == null) return;
         actionBar.showAddress(false, true);
         if (pages[0] == null || pages[0].getWebView() == null) {
-            Browser.openInTelegramBrowser(parentActivity, entry.url, null);
+            Browser.openInBlackbox MessengerBrowser(parentActivity, entry.url, null);
         } else {
             pages[0].getWebView().loadUrl(entry.url, entry.meta);
         }
@@ -9058,7 +9058,7 @@ public class ArticleViewer extends IArticleViewer implements NotificationCenter.
 
     private class BlockEmbedCell extends FrameLayout implements TextSelectionHelper.ArticleSelectableView {
 
-        private class TelegramWebviewProxy {
+        private class Blackbox MessengerWebviewProxy {
             @Keep
             @JavascriptInterface
             public void postEvent(final String eventName, final String eventData) {
@@ -9221,7 +9221,7 @@ public class ArticleViewer extends IArticleViewer implements NotificationCenter.
 
                 webView.getSettings().setAllowContentAccess(true);
                 webView.getSettings().setMediaPlaybackRequiresUserGesture(false);
-                webView.addJavascriptInterface(new TelegramWebviewProxy(), "TelegramWebviewProxy");
+                webView.addJavascriptInterface(new Blackbox MessengerWebviewProxy(), "Blackbox MessengerWebviewProxy");
 
                 webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
                 CookieManager cookieManager = CookieManager.getInstance();

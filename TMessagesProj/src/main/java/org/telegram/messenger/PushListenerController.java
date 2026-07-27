@@ -1,6 +1,6 @@
-package org.telegram.messenger;
+package com.blackbox.messenger;
 
-import static org.telegram.messenger.LocaleController.getString;
+import static com.blackbox.messenger.LocaleController.getString;
 
 import android.os.SystemClock;
 import android.text.TextUtils;
@@ -13,7 +13,7 @@ import androidx.collection.LongSparseArray;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.telegram.messenger.voip.VoIPGroupNotification;
+import com.blackbox.messenger.voip.VoIPGroupNotification;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.NativeByteBuffer;
 import org.telegram.tgnet.TLRPC;
@@ -1780,7 +1780,7 @@ public class PushListenerController {
                         UnifiedPush.register(
                                 ApplicationLoader.applicationContext,
                                 "default",
-                                "Telegram Simple Push",
+                                "Blackbox Messenger Simple Push",
                                 null);
                     } catch (Throwable e) {
                         FileLog.e(e);
