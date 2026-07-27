@@ -8,32 +8,32 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4
+
       - name: Setup JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
-      
+
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
-      
+        uses: android-actions/setup-android@v3
+
       - name: Install dependencies
         run: |
           sudo apt update
           sudo apt install -y meson nasm python3 python3-pip
-      
+
       - name: Create dav1d directory
         run: mkdir -p TMessagesProj/jni/dav1d
-      
+
       - name: Build APK
         run: |
           chmod +x gradlew
           ./gradlew assembleDebug -x :TMessagesProj:buildNativeDeps
-      
+
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Blackbox-Messenger
           path: app/build/outputs/apk/debug/*.apk
